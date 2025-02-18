@@ -85,7 +85,7 @@
     <div class="badge-container" onclick="flipBadge(this)">
         <div class="badge">
             <div class="badge-face front">
-                <img src="Assets/AZ-900.svg" alt="Badge Front" width="100">
+                <img src="Assets/certs/AZ-900.svg" alt="Badge Front" width="100">
             </div>
             <div class="badge-face back">
                 <p>Click to View Details</p>
@@ -96,7 +96,7 @@
     <!-- Modal -->
     <div id="modal-02" class="popup-modal">
         <div class="media">
-            <img src="Assets/AZ-900.svg" alt="" />
+            <img src="Assets/certs/AZ-900.svg" alt="" />
         </div>      
 
         <div class="description-box">
@@ -115,33 +115,43 @@
     <div class="overlay"></div>
 
     <script>
+        let flippedBadge = null;
+
         function flipBadge(element) {
             const badge = element.querySelector(".badge");
-            badge.classList.toggle("flipped");
 
-            if (badge.classList.contains("flipped")) {
+            // Flip the badge
+            badge.classList.add("flipped");
+            flippedBadge = badge;
+
+            // Show the modal after the flip animation completes
+            setTimeout(() => {
+                document.getElementById("modal-02").classList.add("active");
+                document.querySelector(".overlay").classList.add("active");
+            }, 600);
+        }
+
+        function closeModal() {
+            document.getElementById("modal-02").classList.remove("active");
+            document.querySelector(".overlay").classList.remove("active");
+
+            // Flip the badge back after closing the modal
+            if (flippedBadge) {
                 setTimeout(() => {
-                    document.getElementById("modal-02").classList.add("active");
-                    document.querySelector(".overlay").classList.add("active");
-                }, 600); // Delay to match the flip animation
+                    flippedBadge.classList.remove("flipped");
+                    flippedBadge = null;
+                }, 100); // Small delay to ensure a smooth transition
             }
         }
 
-        // Close Modal
+        // Close Modal Event Listeners
         document.querySelector(".popup-modal-dismiss").addEventListener("click", function (event) {
             event.preventDefault();
-            document.getElementById("modal-02").classList.remove("active");
-            document.querySelector(".overlay").classList.remove("active");
-            badge.classList.toggle("flipped");
-
+            closeModal();
         });
 
-        // Close modal when clicking outside
         document.querySelector(".overlay").addEventListener("click", function () {
-            document.getElementById("modal-02").classList.remove("active");
-            document.querySelector(".overlay").classList.remove("active");
-            badge.classList.toggle("flipped");
-
+            closeModal();
         });
     </script>
 
