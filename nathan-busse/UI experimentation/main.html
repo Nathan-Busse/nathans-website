@@ -1,34 +1,149 @@
-<details
-class="details-reset details-overlay details-overlay-dark col-sm-12 col-lg-4 col-12 pr-2 mb-2 js-achievement-card-details"
-data-achievement-slug="pull-shark"
-open
->
-  <summary data-view-component="true" class="achievement-card btn btn-block flex-items-center height-full color-bg-default border rounded-2 color-border-subtle p-3 position-relative">    <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" width="128" alt="Achievement: Pull Shark" data-view-component="true" class="achievement-badge-card" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Achievement Badge Flip</title>
+    <style>
+        .badge-container {
+            width: 150px;
+            height: 150px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
 
-  <div class="d-flex flex-justify-center mb-1">
-    <h3 class="f4 ws-normal">Pull Shark</h3>
-    <span data-view-component="true" class="Label achievement-tier-label achievement-tier-label--silver text-small text-bold color-shadow-medium py-0 px-2 ml-2">x3</span>
-  </div>
-</summary>  <details-dialog
-  class="Box Box--overlay border-0"
-  aria-label="Pull Shark details"
-  src="/users/Nathan-Busse/achievements/pull-shark/detail"
->
-  <include-fragment src="/users/Nathan-Busse/achievements/pull-shark/detail">
-    <div class="d-flex flex-column">
-      <div
-        class="Skeleton d-flex flex-items-center flex-justify-center p-3 rounded-top-2 position-relative"
-        style="height: 180px;"
-      ></div>
-      <div class="d-flex flex-items-center flex-justify-center" style="width:100%; height:206px;">
-          <span data-view-component="true">
-<svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="64" height="64" viewBox="0 0 16 16" fill="none" aria-hidden="true" data-view-component="true" class="anim-rotate">
-  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
-  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-</svg>    <span class="sr-only">Loading</span>
-</span>
-      </div>
+        .badge {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .badge.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .badge-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .front {
+            background: #f0f0f0;
+        }
+
+        .back {
+            background: #333;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* Modal Styles */
+        .popup-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .popup-modal.active {
+            display: block;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="badge-container" onclick="flipBadge(this)">
+        <div class="badge">
+            <div class="badge-face front">
+                <img src="Assets/AZ-900.svg" alt="Badge Front" width="100">
+            </div>
+            <div class="badge-face back">
+                <p>Click to View Details</p>
+            </div>
+        </div>
     </div>
-  </include-fragment>
-</details-dialog>
-</details>
+
+    <!-- Modal -->
+    <div id="modal-02" class="popup-modal">
+        <div class="media">
+            <img src="Assets/AZ-900.svg" alt="" />
+        </div>      
+
+        <div class="description-box">
+            <h4>Microsoft Fundamentals in Cloud Computing (AZ-900T)</h4>		      
+            <p></p>
+            <div class="categories">Azure</div>			               
+        </div>
+
+        <div class="link-box">
+            <a href="#">Details</a>
+            <a href="https://learn.microsoft.com/en-us/users/nathanbusse-2561/achievements?tab=tab-modules">Achievements</a>
+            <a href="#" class="popup-modal-dismiss">Close</a>
+        </div>		      
+    </div>
+
+    <div class="overlay"></div>
+
+    <script>
+        function flipBadge(element) {
+            const badge = element.querySelector(".badge");
+            badge.classList.toggle("flipped");
+
+            if (badge.classList.contains("flipped")) {
+                setTimeout(() => {
+                    document.getElementById("modal-02").classList.add("active");
+                    document.querySelector(".overlay").classList.add("active");
+                }, 600); // Delay to match the flip animation
+            }
+        }
+
+        // Close Modal
+        document.querySelector(".popup-modal-dismiss").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("modal-02").classList.remove("active");
+            document.querySelector(".overlay").classList.remove("active");
+            badge.classList.toggle("flipped");
+
+        });
+
+        // Close modal when clicking outside
+        document.querySelector(".overlay").addEventListener("click", function () {
+            document.getElementById("modal-02").classList.remove("active");
+            document.querySelector(".overlay").classList.remove("active");
+            badge.classList.toggle("flipped");
+
+        });
+    </script>
+
+</body>
+</html>
