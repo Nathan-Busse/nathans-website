@@ -1952,6 +1952,13 @@ header .logo a {
 	}
 }
 
+.folio-item {
+    transition: transform 0.5s ease;
+}
+
+.folio-item.flipped {
+    transform: rotateY(180deg);
+}
 
 /** 
  * ===================================================================
