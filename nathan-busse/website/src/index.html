@@ -208,7 +208,7 @@
 </div> <!-- /section-intro--> 
 <div class="row button-section">
 	<div class="col-twelve">
-		<a href="html/coding-habits.html" title="Click here to view my coding habits" class="button button-primary">Click here to view my coding habits</a>
+		<a href="html/coding-habits.html" title="My coding habits" class="button button-primary">My coding habits</a>
 
 
 
@@ -453,7 +453,7 @@
 	</div> <!-- /section-intro--> 
 	<div class="row button-section">
 		<div class="col-twelve">
-			<a href="Assets/CV/NEW-LAYOUT/NEW-LAYOUT.pdf" title="Download CV" class="button button-primary">Download CV</a>
+			<a href="Assets/CV/Resume.pdf" title="Download CV" class="button button-primary">Download CV</a>
 		</div>   		
 	</div>
 </section>	
@@ -478,35 +478,21 @@
    		<div class="col-twelve">
 
             <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
-
-                  <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div>                      
-                 <div class="form-field">
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
-								</div>
-							</div>
-                  </div>
-
-      			</fieldset>
-      		</form> <!-- Form End -->
+		<form action="https://formspree.io/f/xovewkgo" method="POST">
+			<input type="text" name="name" placeholder="Your Name" required>
+			<input type="email" name="email" placeholder="Your Email" required>
+			<textarea name="message" placeholder="Your Message" required></textarea>
+			<button class="submitform">E-mail </button>
+            <div id="submit-loader">
+                <div class="text-loader">Attempting to open your installed mail app to ensure a safe and secure of your email...</div>                             
+       				<div class="s-loader">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
+					</div>
+				</div>
+            </div>
+      	</form> <!-- Form End -->
 
             <!-- contact-warning -->
             <div id="message-warning">            	

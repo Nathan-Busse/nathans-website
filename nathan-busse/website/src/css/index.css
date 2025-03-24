@@ -1622,8 +1622,8 @@
  
  /* wakatime Section */
  #wakatime {
-	 padding-top: 12rem;
-	 padding-bottom: 12rem;
+	 padding-top: 18rem;
+	 padding-bottom: 18rem;
  }
  
  #wakatime .wakatime-header {
@@ -1634,7 +1634,7 @@
  }
  
  #wakatime .wakatime-timeline {
-	 max-width: 980px;
+	 max-width: 1800;
  }
  #wakatime .timeline-wrap {
 	 position: relative;
@@ -1642,7 +1642,7 @@
 	 margin-bottom: 6rem;
  }
  #wakatime .timeline-wrap::before {
-	 content: "";
+	 content: "Click here to view my coding habits";
 	 display: block;
 	 width: 1px;
 	 height: 100%;
@@ -1660,7 +1660,7 @@
 	 width: 4.8rem;
 	 line-height: 4.8rem;
 	 background: #313131;
-	 border-radius: 50%;
+	 border-radius: 100%;
 	 text-align: center;
 	 color: #FFFFFF;
 	 position: absolute;
