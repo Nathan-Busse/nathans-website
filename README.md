@@ -1,2 +1,2 @@
-Server Status: In_construction
-Site status: Overall enhancement phase
+Server status: "Under-construction."
+Site status: "Overall enhancement phase."
