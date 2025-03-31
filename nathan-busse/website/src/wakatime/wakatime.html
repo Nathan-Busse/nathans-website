@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <body>
-    <head>
-        <header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WakaTime Stats</title>
+    <link rel="stylesheet" href="wakatime.css">
+    <script defer src="wakatime.js"></script>
+</head>
+<body>
+    <header>
+        <h1>WakaTime Stats</h1>
+        <p>My coding activity insights</p>
+    </header>
 
-        </header>
-    </head>        
+    <main>
+        <div class="chart-container">
+            <!-- Skeleton Loader -->
+            <div class="skeleton-loader"></div>
 
-    </body>
+            <!-- WakaTime Chart (Hidden initially) -->
+            <img id="wakatime-chart" 
+            src="https://wakatime.com/share/@Nathan_Busse/333adc17-0b38-494a-b394-744028021973.png"
+                alt="WakaTime Chart" 
+                onload="showChart()">
+        </div>
+    </main>
+
     <footer>
-
+        <p>Powered by WakaTime | Designed by Me</p>
     </footer>
+</body>
 </html>
