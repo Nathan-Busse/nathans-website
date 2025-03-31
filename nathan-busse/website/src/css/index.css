@@ -1294,10 +1294,10 @@
   * ------------------------------------------------------------------- 
   */
  #intro {
-	 background: #151515 url(../assets/images/intro-bg.jpg) no-repeat center top;
+	 background: #151515 url(../assets/images/intro-bg.jpg) no-repeat;
 	 -webkit-background-size: cover;
 	 -moz-background-size: cover;
-	 background-size: cover;
+	 background-size: exact;
 	 background-attachment: fixed;
 	 width: 100%;
 	 height: 100%;
@@ -1313,7 +1313,7 @@
 	 width: 100%;
 	 height: 100%;
 	 background: #111111;
-	 opacity: .90;
+	 opacity: .70;
  }
  
  .intro-content {
