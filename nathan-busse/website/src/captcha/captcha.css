@@ -1,37 +1,18 @@
-#image{
-    margin-top: 10px;
-    box-shadow: 5px 5px 5px 5px gray;
-    width: 60px;;
-    padding: 20px;
-    font-weight: 400;
-    padding-bottom: 0px;
-    height: 40px;
-    user-select: none;
-    text-decoration:line-through;
-    font-style: italic;
-    font-size: x-large;
-    border: red 2px solid;
-    margin-left: 10px;
-    
+.pdf-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-#user-input{
-    box-shadow: 5px 5px 5px 5px gray;
-    width:auto;
-    margin-right: 10px;
-    padding: 10px;
-    padding-bottom: 0px;
-    height: 40px;
-    border: red 0px solid;
-}
-input{
-    border:1px black solid;
-}
-.inline{
-    display:inline-block;
-}
-#btn{
-    box-shadow: 5px 5px 5px grey;
-    color: aqua;
-    margin: 10px;
-    background-color: brown;
+
+.pdf-button:hover {
+    background-color: #0056b3;
 }
