@@ -1294,7 +1294,7 @@
   * ------------------------------------------------------------------- 
   */
  #intro {
-	 background: #151515 url(../Assets/images/intro-bg.jpg) no-repeat center bottom;
+	 background: #151515 url(../assets/images/intro-bg.jpg) no-repeat center top;
 	 -webkit-background-size: cover;
 	 -moz-background-size: cover;
 	 background-size: cover;
