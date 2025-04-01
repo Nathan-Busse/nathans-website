@@ -1,6 +1,7 @@
 function showChart() {
     const loader = document.querySelector('.skeleton-loader');
     const chart = document.getElementById('wakatime-chart');
+    
 
     if (loader && chart) {
         loader.style.display = 'none'; // Hide skeleton loader
