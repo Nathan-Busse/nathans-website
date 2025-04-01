@@ -1,11 +1,12 @@
-function showChart() {
-    const loader = document.querySelector('.skeleton-loader');
-    const chart = document.getElementById('wakatime-chart');
-    
+document.addEventListener("DOMContentLoaded", function () {
+    const charts = document.querySelectorAll(".wakatime-chart");
 
-    if (loader && chart) {
-        loader.style.display = 'none'; // Hide skeleton loader
-        chart.style.opacity = '1';      // Fade in chart
-        chart.style.transform = 'scale(1)'; // Restore original size
-    }
-}
+    charts.forEach(chart => {
+        chart.onload = function () {
+            const loader = this.previousElementSibling; // Find the skeleton loader
+            if (loader) loader.style.display = "none"; // Hide loader
+            this.style.opacity = "1"; // Fade in chart
+            this.style.transform = "scale(1)"; // Restore size
+        };
+    });
+});

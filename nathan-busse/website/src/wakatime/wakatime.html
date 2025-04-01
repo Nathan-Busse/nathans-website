@@ -11,51 +11,43 @@
     <header>
         <h1>WakaTime Stats</h1>
         <p>My coding activity insights</p>
+        
+        <!-- Back to Home Button -->
+        <button class="home-button" onclick="goHome()">← Back to Home</button>
     </header>
 
     <main>
-        <div class="chart-container">
-            <!-- Skeleton Loader -->
-            <div class="skeleton-loader"></div>
-
-            <!-- WakaTime Chart (Hidden initially) -->
-            <img id="wakatime-chart"
-            src="https://wakatime.com/share/@Nathan_Busse/83f12ce0-396f-48b7-9a34-e41419964044.png"
-            alt="WakaTime Chart"
-            onload="showChart()">
+        <div class="chart-grid">
+            <!-- Charts (unchanged) -->
+            <div class="chart-container">
+                <div class="skeleton-loader"></div>
+                <img class="wakatime-chart" 
+                     src="https://wakatime.com/share/@yourusername/chart1.png" 
+                     alt="Coding Activity Chart">
+            </div>
+            <div class="chart-container">
+                <div class="skeleton-loader"></div>
+                <img class="wakatime-chart" 
+                     src="https://wakatime.com/share/@yourusername/chart2.png" 
+                     alt="Languages Used Chart">
+            </div>
+            <div class="chart-container">
+                <div class="skeleton-loader"></div>
+                <img class="wakatime-chart" 
+                     src="https://wakatime.com/share/@yourusername/chart3.png" 
+                     alt="Editors Used Chart">
+            </div>
         </div>
-
-        
     </main>
-  
+
     <footer>
-        <div class="row">
-
-            <div class="col-six tab-full pull-right social">
-
-                <ul class="footer-social">        
-                   <li><a href="https://github.com/Nathan-Busse"><i class="fa fa-github"></i></a></li>
-                   <li><a href="https://www.linkedin.com/in/nathan-busse-ab7a1924b/"><i class="fa fa-linkedin"></i></a></li>
-                   <li><a href="https://www.youtube.com/c/TheProgrammerAffect-Nathan-Busse/featured"><i class="fa fa-youtube"></i></a></li>
-                   <li><a href="https://www.instagram.com/_nathan.busse_/"><i class="fa fa-instagram"></i></a></li>
-              </ul> 
-                 
-         </div>
-
-         <div class="col-six tab-full">
-             <div class="copyright">
-                   <span></span> 
-                   <span>Website created by <a> Nathan Graham Busse</a></span>	         	
-                </div>		                  
-             </div>
-
-             <div id="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-             </div>
-
-         </div> <!-- /row -->     	
-
-    <p>Powered by WakaTime | Designed by Me</p>
+        <p>Powered by WakaTime | Page created by Nathan Graham Busse</p>
     </footer>
+
+    <script>
+        function goHome() {
+            window.location.href = "../index.html"; // Change this to your home page
+        }
+    </script>
 </body>
 </html>
