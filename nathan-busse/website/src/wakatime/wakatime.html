@@ -10,32 +10,45 @@
 <body>
     <header>
         <h1>WakaTime Stats</h1>
-        <p>My coding activity insights</p>
-        
-        <!-- Back to Home Button -->
-        <button class="home-button" onclick="goHome()">← Back to Home</button>
+        <p>My coding activity insights (Free Account)</p>
     </header>
 
     <main>
         <div class="chart-grid">
-            <!-- Charts (unchanged) -->
+            <!-- Activity -->
             <div class="chart-container">
+                <h2>Activity</h2>
                 <div class="skeleton-loader"></div>
                 <img class="wakatime-chart" 
-                     src="https://wakatime.com/share/@yourusername/chart1.png" 
-                     alt="Coding Activity Chart">
+
+                     alt="Activity">
             </div>
+
+            <!-- Languages -->
             <div class="chart-container">
+                <h2>Languages</h2>
                 <div class="skeleton-loader"></div>
                 <img class="wakatime-chart" 
-                     src="https://wakatime.com/share/@yourusername/chart2.png" 
-                     alt="Languages Used Chart">
+
+                     alt="Languages">
             </div>
+
+            <!-- Editors -->
             <div class="chart-container">
+                <h2>Editors</h2>
                 <div class="skeleton-loader"></div>
                 <img class="wakatime-chart" 
-                     src="https://wakatime.com/share/@yourusername/chart3.png" 
-                     alt="Editors Used Chart">
+
+                     alt="Editors">
+            </div>
+
+            <!-- Operating Systems -->
+            <div class="chart-container">
+                <h2>Operating Systems</h2>
+                <div class="skeleton-loader"></div>
+                <img class="wakatime-chart" 
+
+                     alt="Operatinig Systems">
             </div>
         </div>
     </main>
@@ -44,9 +57,12 @@
         <p>Powered by WakaTime | Page created by Nathan Graham Busse</p>
     </footer>
 
+    <!-- Floating Back to Home Button -->
+    <button class="floating-home-button" onclick="goHome()">← Home</button>
+
     <script>
         function goHome() {
-            window.location.href = "../index.html"; // Change this to your home page
+            window.location.href = "../index.html"; // Change to your home page
         }
     </script>
 </body>
