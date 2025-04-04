@@ -1,5 +1,5 @@
 {
-    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.CustomBrowser": null,
     "liveServer.settings.fullReload": true,
     "fiveServer.openTerminal": true,
     "fiveServer.injectBody": false,
