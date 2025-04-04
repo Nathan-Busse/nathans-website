@@ -116,25 +116,6 @@ footer {
     }
 }
 
-/* Back to Home Button */
-.home-button {
-    background-color: #89b4fa;
-    color: #1e1e2e;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-
-.home-button:hover {
-    background-color: #6e9bdc;
-    transform: scale(1.05);
-}
-
 /* Floating Back to Home Button */
 .floating-home-button {
     position: fixed;
