@@ -1023,7 +1023,7 @@
 	 background: #ebebeb;
  }
  .grey-section p.lead {
-	 color: #7d7d7d;
+	 color: #eee;
  }
  .section-intro {
 	 max-width: 700px;
@@ -1372,18 +1372,18 @@
 	 text-align: center;
 	 display: inline-block;
 	 padding: 0 8px 0 14px;
-	 color: rgba(255, 255, 255, 0.3);
+	 color: #eee(255, 255, 255, 0.3);
  }
  .intro-content .intro-position span:first-child::before {
 	 content: "|";
 	 text-align: center;
 	 display: inline-block;
 	 padding: 0 14px 0 8px;
-	 color: rgba(255, 255, 255, 0.3);
+	 color: #eee(255, 255, 255, 0.3);
  }
  .intro-content .button {
-	 color: #FFFFFF !important;
-	 border-color: rgba(255, 255, 255, 0.3);
+	 color: #eee !important;
+	 border-color: #eee(255, 255, 255, 0.3);
 	 height: 6rem !important;
 	 line-height: 5.4rem !important;
 	 padding: 0 3.5rem 0 3rem !important;
@@ -1655,7 +1655,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -1710,7 +1710,7 @@
 	 display: block;
 	 height: 3px;
 	 width: 50px;
-	 background: rgba(0, 0, 0, 0.2);
+	 background: #eee(0, 0, 0, 0.2);
 	 position: absolute;
 	 left: 0;
 	 bottom: 0;
@@ -1818,7 +1818,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -1873,7 +1873,7 @@
 	 display: block;
 	 height: 3px;
 	 width: 50px;
-	 background: rgba(0, 0, 0, 0.2);
+	 background: #eee(0, 0, 0, 0.2);
 	 position: absolute;
 	 left: 0;
 	 bottom: 0;
@@ -1987,7 +1987,7 @@
 	display: block;
 	width: 1px;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
+	background: #eee(0, 0, 0, 0.1);
 	position: absolute;
 	left: 35%;
 	top: 0;
@@ -2042,7 +2042,7 @@
 	display: block;
 	height: 3px;
 	width: 50px;
-	background: rgba(0, 0, 0, 0.2);
+	background: #eee(0, 0, 0, 0.2);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -2155,7 +2155,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -2331,7 +2331,7 @@
 	 letter-spacing: .1rem;
 	 display: block;
 	 text-align: left;
-	 color: rgba(0, 0, 0, 0.5);
+	 color: #eee(0, 0, 0, 0.5);
  }
  .popup-modal .link-box {
 	 width: 100%;
@@ -2357,7 +2357,7 @@
 	 transition: all 0.3s ease-in-out;
  }
  .popup-modal .link-box a:first-child {
-	 border-right: 1px solid rgba(200, 200, 200, 0.1);
+	 border-right: 1px solid #eee(200, 200, 200, 0.1);
  }
  .popup-modal .link-box a:hover {
 	 background: #cc005f;
@@ -2596,7 +2596,7 @@
 	 max-width: 1440px;
  }
  #stats .stat {
-	 border-left: 1px solid rgba(255, 255, 255, 0.12);
+	 border-left: 1px solid #eee(255, 255, 255, 0.12);
 	 min-height: 17.4rem;
  }
  #stats .stat:first-child {
@@ -2615,7 +2615,7 @@
 	 color: white;
  }
  #stats .stat-title {
-	 color: rgba(255, 255, 255, 0.5);
+	 color: #eee(255, 255, 255, 0.5);
  }
  
  /**
@@ -2634,7 +2634,7 @@
  }
  @media only screen and (max-width:768px) {
 	 #stats .stat:nth-child(n) {
-		 border-left: 1px solid rgba(255, 255, 255, 0.12);
+		 border-left: 1px solid #eee(255, 255, 255, 0.12);
 	 }
 	 #stats .stat:nth-child(2n+1) {
 		 border: none;
