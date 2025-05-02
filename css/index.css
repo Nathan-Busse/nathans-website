@@ -74,7 +74,7 @@
 	 font-family: "lora-regular", serif;
 	 font-size: 1.7rem;
 	 line-height: 3rem;
-	 color: #6e6e6e;
+	 color: #eee;
  }
  
  /**
@@ -189,7 +189,7 @@
 	 font-size: 8rem;
 	 line-height: 0px;
 	 margin: 0;
-	 color: #313131;
+	 color: #eee;
 	 font-family: arial, sans-serif;
 	 position: absolute;
 	 top: 3rem;
@@ -331,7 +331,7 @@
 	 border-bottom: 1px solid #E8E8E8;
  }
  th {
-	 color: #313131;
+	 color: #eee;
 	 font-family: "poppins-bold", sans-serif;
  }
  td {
@@ -525,7 +525,7 @@
 	 border: 0;
 	 outline: none;
 	 box-align: middle;
-	 color: #313131;
+	 color: #eee;
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.5rem;
 	 line-height: 3rem;
@@ -575,7 +575,7 @@
 	 font-size: 18px;
 	 text-align: center;
 	 pointer-events: none;
-	 color: #252525;
+	 color: #eee;
  }
  
  /* IE9 and below */
@@ -601,7 +601,7 @@
 	 font-family: "poppins-bold", sans-serif;
 	 font-size: 1.4rem;
 	 margin-bottom: .6rem;
-	 color: #3b3b3b;
+	 color: #eee;
 	 display: block;
  }
  input[type="checkbox"], input[type="radio"] {
@@ -695,7 +695,7 @@
  input[type="reset"].button-primary,
  input[type="button"].button-primary {
 	 background: #313131;
-	 color: #FFFFFF;
+	 color: #eee;
  }
  .button.button-primary:hover,
  a.button.button-primary:hover,
@@ -922,7 +922,7 @@
 	 font-size: 2.5rem;
 	 font-family: "poppins-bold", sans-serif;
 	 border: none;
-	 color: #252525;
+	 color: #eee;
  }
  .stats-tabs li a:hover {
 	 color: #FF0077;
@@ -973,7 +973,7 @@
 	 top: -3.6rem;
 	 display: block;
 	 font-family: "poppins-regular", sans-serif;
-	 color: white;
+	 color: #eee;
 	 font-size: 1.1rem;
 	 line-height: 1;
 	 background: #313131;
@@ -1036,7 +1036,7 @@
  .section-intro h1 {
 	 font-family: "poppins-semibold", serif;
 	 font-size: 3.6rem;
-	 color: #313131;
+	 color: #eee;
 	 line-height: 1.25;
 	 margin-bottom: 1.2rem;
  }
@@ -1245,7 +1245,7 @@
  }
  .main-navigation li a {
 	 display: block;
-	 color: #FFFFFF;
+	 color: #eee;
 	 width: auto;
 	 padding: 15px 0;
 	 line-height: 16px;
@@ -1334,7 +1334,7 @@
 	 transform: translateY(-2.1rem);
  }
  .intro-content h1 {
-	 color: #FFFFFF;
+	 color: #eee;
 	 font-family: "poppins-medium", sans-serif;
 	 font-size: 8.4rem;
 	 line-height: 1.071;
@@ -1361,7 +1361,7 @@
 	 line-height: 2.4rem;
 	 text-transform: uppercase;
 	 letter-spacing: .2rem;
-	 color: #FFFFFF;
+	 color: #eee;
 	 text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
  }
  .intro-content .intro-position span {
