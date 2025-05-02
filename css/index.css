@@ -102,7 +102,7 @@
   */
  h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
 	 font-family: "poppins-semibold", sans-serif;
-	 color: #313131;
+	 color: #eee;
 	 font-style: normal;
 	 text-rendering: optimizeLegibility;
 	 margin-bottom: 2.1rem;
@@ -257,7 +257,7 @@
  }
  mark {
 	 background: #FFF49B;
-	 color: #000;
+	 color: #eee;
  }
  hr {
 	 border: solid #d2d2d2;
@@ -661,7 +661,7 @@
 	 padding: 0 3rem;
 	 margin: 0 .3rem 1.2rem 0;
 	 background: #d8d8d8;
-	 color: #313131;
+	 color: #eee;
 	 text-decoration: none;
 	 cursor: pointer;
 	 text-align: center;
