@@ -685,7 +685,7 @@
  input[type="reset"]:focus,
  input[type="button"]:focus {
 	 background: #bebebe;
-	 color: #000000;
+	 color: #eee;
 	 outline: 0;
  }
  .button.button-primary,
@@ -804,7 +804,7 @@
 	 line-height: 6rem;
 	 text-indent: 0;
 	 background: transparent;
-	 color: #313131;
+	 color: #eee;
  }
  
  /**
@@ -870,7 +870,7 @@
 	 position: absolute;
 	 font-size: 8rem;
 	 font-family: Arial, Sans-Serif;
-	 color: #333;
+	 color: #eee;
  }
  .pull-quote:before {
 	 content: "\201C";
@@ -956,7 +956,7 @@
 	 left: 0;
 	 top: -3rem;
 	 font-family: "poppins-bold", sans-serif;
-	 color: #313131;
+	 color: #eee;
 	 text-transform: uppercase;
 	 letter-spacing: .2rem;
 	 font-size: 1.5rem;
@@ -1546,7 +1546,7 @@
  }
  .about-content .info-list li strong {
 	 font-family: "poppins-bold", sans-serif;
-	 color: #313131;
+	 color: #eee;
 	 text-transform: uppercase;
 	 letter-spacing: .2rem;
 	 font-size: 1.5rem;
@@ -1555,7 +1555,7 @@
  .about-content .info-list li span {
 	 display: block;
 	 font-family: "poppins-regular", sans-serif;
-	 color: #888888;
+	 color: #eee;
 	 font-size: 1.5rem;
 	 line-height: 1;
  }
@@ -2027,7 +2027,7 @@
 #studies .timeline-header p {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.6rem;
-	color: #888888;
+	color: #eee;
 }
 #studies .timeline-content {
 	margin-left: 35%;
@@ -2195,7 +2195,7 @@
  #resume .timeline-header p {
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.6rem;
-	 color: #888888;
+	 color: #eee;
  }
  #resume .timeline-content {
 	 margin-left: 35%;
@@ -2436,7 +2436,7 @@
 	 text-align: center;
  }
  #cta p.lead {
-	 color: #6e6e6e;
+	 color: #eee;
  }
  .cta-content {
 	 max-width: 640px;
@@ -2471,10 +2471,10 @@
 	 margin-left: -40px;
  }
  .section-ads h2 a, .section-ads h2 a:visited {
-	 color: #313131;
+	 color: #eee;
  }
  .section-ads span {
-	 color: #3F0D39;
+	 color: #eee;
  }
  
  /**
