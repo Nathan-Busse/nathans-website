@@ -116,22 +116,22 @@
 
 			<div id="markdown-content"></div>
 				<script>
-					const markdown = ` `
-</div>
-</div>   		
-</div>
-<!-- /section-intro -->
-
-   	<div class="row about-content">
-
-   		<div class="col-six tab-full">
-
-   			<h3>Profile</h3>
-   			<p></p>
-
-   			<ul class="info-list">
+					const markdown = ` 
+     
+     
+     
+     
+     `;
+					document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+				</script>
+			</div>
+				<div class="row about-content">
+					<div class="col-six tab-full">
+						<h3>Profile</h3>
+						<p></p>
+						<ul class="info-list">
    				<li>
-   					<strong>Fullname:</strong>
+					<strong>Fullname:</strong>
    					<span>Nathan Graham Busse</span>
    				</li>
    				<li>
@@ -145,35 +145,17 @@
 				<li>
 					<strong>Fluent language:</strong>
 					<span>Afrikaans</span>
-				</li>   				
-
-   			</ul> <!-- /info-list -->
-
-   		</div>
-
-     <!-- wakatime Section -->
-     
-</section>
-<section id="resume">
-
-	<div class="row section-intro">
-		<div class="col-twelve resume-header">
-
-		<h2>Coding habits</h2>
-		<h3>Powered by wakatime API.</h3>
-
-		<p class="lead"></p>
-
-	</div>   		
-</div> <!-- /section-intro--> 
-<div class="row button-section">
-	<div class="col-twelve">
-		<a href="wakatime/wakatime.html" title="My coding habits" class="button button-primary">My coding habits</a>
-
-
-
-	</div>   		
-</div>
+				</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+	   <div class="row button-section">
+		   <div class="col-twelve">
+			   <a href="wakatime/wakatime.html" title="My coding habits" class="button button-primary">My coding habits</a>
+		   </div>
+	   </div>
 </section>
 
    <!-- resume Section
