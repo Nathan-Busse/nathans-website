@@ -5,23 +5,41 @@
 }
 
 body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
 }
 
 .container {
   text-align: center;
+  width: 80%;
 }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+nav {
+  text-align: left;
+  padding: 10px;
 }
 
-p {
-  font-size: 1.5em;
+.url {
+  color: grey;
+}
+
+.cv-section h1, .contact-section h2 {
+  color: #ff007f; /* Pink accent */
+}
+
+.preview-btn {
+  padding: 10px 20px;
+  background-color: grey;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.preview-btn:hover {
+  background-color: #555;
 }
