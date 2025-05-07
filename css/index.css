@@ -1,9 +1,4 @@
-/**
- * =================================================================== 
- *
- *  Kards v1.0 Main Stylesheet
- *  url: styleshout.com
- *  03-01-2016
+/*
  *  ------------------------------------------------------------------
  *  TOC:
  *  01. webfonts and iconfonts
@@ -42,7 +37,7 @@
  
  /** 
   * ===================================================================
-  * 02. base style overrides - (_document-setup.scss)
+  * 02. base style overrides - (_document-setup.css)
   *
   * ------------------------------------------------------------------- 
   */
@@ -74,7 +69,7 @@
 	 font-family: "lora-regular", serif;
 	 font-size: 1.7rem;
 	 line-height: 3rem;
-	 color: #6e6e6e;
+	 color: #eee;
  }
  
  /**
@@ -102,7 +97,7 @@
   */
  h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
 	 font-family: "poppins-semibold", sans-serif;
-	 color: #313131;
+	 color: #eee;
 	 font-style: normal;
 	 text-rendering: optimizeLegibility;
 	 margin-bottom: 2.1rem;
@@ -156,7 +151,7 @@
 	 font-family: "lora-regular", serif;
 	 font-size: 2rem;
 	 line-height: 1.8;
-	 color: #888888;
+	 color: #eee;
  }
  @media only screen and (max-width:768px) {
 	 p.lead {
@@ -189,7 +184,7 @@
 	 font-size: 8rem;
 	 line-height: 0px;
 	 margin: 0;
-	 color: #313131;
+	 color: #eee;
 	 font-family: arial, sans-serif;
 	 position: absolute;
 	 top: 3rem;
@@ -212,7 +207,7 @@
 	 content: "\2014 \0020";
  }
  blockquote cite a, blockquote cite a:visited {
-	 color: #888888;
+	 color: #eee;
 	 border: none;
  }
  abbr {
@@ -220,7 +215,7 @@
 	 font-variant: small-caps;
 	 text-transform: lowercase;
 	 letter-spacing: .05rem;
-	 color: #888888;
+	 color: #eee;
  }
  var, kbd, samp, code, pre {
 	 font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
@@ -257,7 +252,7 @@
  }
  mark {
 	 background: #FFF49B;
-	 color: #000;
+	 color: #eee;
  }
  hr {
 	 border: solid #d2d2d2;
@@ -331,7 +326,7 @@
 	 border-bottom: 1px solid #E8E8E8;
  }
  th {
-	 color: #313131;
+	 color: #eee;
 	 font-family: "poppins-bold", sans-serif;
  }
  td {
@@ -524,8 +519,8 @@
 	 padding: 1.5rem 0;
 	 border: 0;
 	 outline: none;
-	 align-self: middle;
-	 color: #313131;
+	 box-align: middle;
+	 color: #eee;
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.5rem;
 	 line-height: 3rem;
@@ -575,7 +570,7 @@
 	 font-size: 18px;
 	 text-align: center;
 	 pointer-events: none;
-	 color: #252525;
+	 color: #eee;
  }
  
  /* IE9 and below */
@@ -601,7 +596,7 @@
 	 font-family: "poppins-bold", sans-serif;
 	 font-size: 1.4rem;
 	 margin-bottom: .6rem;
-	 color: #3b3b3b;
+	 color: #eee;
 	 display: block;
  }
  input[type="checkbox"], input[type="radio"] {
@@ -661,7 +656,7 @@
 	 padding: 0 3rem;
 	 margin: 0 .3rem 1.2rem 0;
 	 background: #d8d8d8;
-	 color: #313131;
+	 color: #eee;
 	 text-decoration: none;
 	 cursor: pointer;
 	 text-align: center;
@@ -685,7 +680,7 @@
  input[type="reset"]:focus,
  input[type="button"]:focus {
 	 background: #bebebe;
-	 color: #000000;
+	 color: #eee;
 	 outline: 0;
  }
  .button.button-primary,
@@ -695,7 +690,7 @@
  input[type="reset"].button-primary,
  input[type="button"].button-primary {
 	 background: #313131;
-	 color: #FFFFFF;
+	 color: #eee;
  }
  .button.button-primary:hover,
  a.button.button-primary:hover,
@@ -804,7 +799,7 @@
 	 line-height: 6rem;
 	 text-indent: 0;
 	 background: transparent;
-	 color: #313131;
+	 color: #eee;
  }
  
  /**
@@ -870,7 +865,7 @@
 	 position: absolute;
 	 font-size: 8rem;
 	 font-family: Arial, Sans-Serif;
-	 color: #333;
+	 color: #eee;
  }
  .pull-quote:before {
 	 content: "\201C";
@@ -922,7 +917,7 @@
 	 font-size: 2.5rem;
 	 font-family: "poppins-bold", sans-serif;
 	 border: none;
-	 color: #252525;
+	 color: #eee;
  }
  .stats-tabs li a:hover {
 	 color: #FF0077;
@@ -932,7 +927,7 @@
 	 margin: .6rem 0 0 0;
 	 font-size: 1.4rem;
 	 font-family: "poppins-regular", sans-serif;
-	 color: #888888;
+	 color: #eee;
  }
  
  /**
@@ -956,7 +951,7 @@
 	 left: 0;
 	 top: -3rem;
 	 font-family: "poppins-bold", sans-serif;
-	 color: #313131;
+	 color: #eee;
 	 text-transform: uppercase;
 	 letter-spacing: .2rem;
 	 font-size: 1.5rem;
@@ -973,7 +968,7 @@
 	 top: -3.6rem;
 	 display: block;
 	 font-family: "poppins-regular", sans-serif;
-	 color: white;
+	 color: #eee;
 	 font-size: 1.1rem;
 	 line-height: 1;
 	 background: #313131;
@@ -1023,7 +1018,7 @@
 	 background: #ebebeb;
  }
  .grey-section p.lead {
-	 color: #7d7d7d;
+	 color: #eee;
  }
  .section-intro {
 	 max-width: 700px;
@@ -1036,7 +1031,7 @@
  .section-intro h1 {
 	 font-family: "poppins-semibold", serif;
 	 font-size: 3.6rem;
-	 color: #313131;
+	 color: #eee;
 	 line-height: 1.25;
 	 margin-bottom: 1.2rem;
  }
@@ -1245,7 +1240,7 @@
  }
  .main-navigation li a {
 	 display: block;
-	 color: #FFFFFF;
+	 color: #eee;
 	 width: auto;
 	 padding: 15px 0;
 	 line-height: 16px;
@@ -1334,7 +1329,7 @@
 	 transform: translateY(-2.1rem);
  }
  .intro-content h1 {
-	 color: #FFFFFF;
+	 color: #eee;
 	 font-family: "poppins-medium", sans-serif;
 	 font-size: 8.4rem;
 	 line-height: 1.071;
@@ -1361,7 +1356,7 @@
 	 line-height: 2.4rem;
 	 text-transform: uppercase;
 	 letter-spacing: .2rem;
-	 color: #FFFFFF;
+	 color: #eee;
 	 text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
  }
  .intro-content .intro-position span {
@@ -1372,18 +1367,18 @@
 	 text-align: center;
 	 display: inline-block;
 	 padding: 0 8px 0 14px;
-	 color: rgba(255, 255, 255, 0.3);
+	 color: #eee(255, 255, 255, 0.3);
  }
  .intro-content .intro-position span:first-child::before {
 	 content: "|";
 	 text-align: center;
 	 display: inline-block;
 	 padding: 0 14px 0 8px;
-	 color: rgba(255, 255, 255, 0.3);
+	 color: #eee(255, 255, 255, 0.3);
  }
  .intro-content .button {
-	 color: #FFFFFF !important;
-	 border-color: rgba(255, 255, 255, 0.3);
+	 color: #eee !important;
+	 border-color: #eee(255, 255, 255, 0.3);
 	 height: 6rem !important;
 	 line-height: 5.4rem !important;
 	 padding: 0 3.5rem 0 3rem !important;
@@ -1546,7 +1541,7 @@
  }
  .about-content .info-list li strong {
 	 font-family: "poppins-bold", sans-serif;
-	 color: #313131;
+	 color: #eee;
 	 text-transform: uppercase;
 	 letter-spacing: .2rem;
 	 font-size: 1.5rem;
@@ -1555,7 +1550,7 @@
  .about-content .info-list li span {
 	 display: block;
 	 font-family: "poppins-regular", sans-serif;
-	 color: #888888;
+	 color: #eee;
 	 font-size: 1.5rem;
 	 line-height: 1;
  }
@@ -1655,7 +1650,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -1671,7 +1666,7 @@
 	 background: #313131;
 	 border-radius: 100%;
 	 text-align: center;
-	 color: #252525;
+	 color: #FFFFFF;
 	 position: absolute;
 	 left: 35%;
 	 top: .9rem;
@@ -1695,7 +1690,7 @@
  #wakatime .timeline-header p {
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.6rem;
-	 color: #888888;
+	 color: #eee;
  }
  #wakatime .timeline-content {
 	 margin-left: 35%;
@@ -1710,7 +1705,7 @@
 	 display: block;
 	 height: 3px;
 	 width: 50px;
-	 background: rgba(0, 0, 0, 0.2);
+	 background: #eee(0, 0, 0, 0.2);
 	 position: absolute;
 	 left: 0;
 	 bottom: 0;
@@ -1818,7 +1813,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -1834,7 +1829,7 @@
 	 background: #252525;
 	 border-radius: 100%;
 	 text-align: center;
-	 color: #252525;
+	 color: #FFFFFF;
 	 position: absolute;
 	 left: 35%;
 	 top: .9rem;
@@ -1858,7 +1853,7 @@
  #portfolio .timeline-header p {
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.6rem;
-	 color: #888888;
+	 color: #eee;
  }
  #portfolio .timeline-content {
 	 margin-left: 35%;
@@ -1873,7 +1868,7 @@
 	 display: block;
 	 height: 3px;
 	 width: 50px;
-	 background: rgba(0, 0, 0, 0.2);
+	 background: #eee(0, 0, 0, 0.2);
 	 position: absolute;
 	 left: 0;
 	 bottom: 0;
@@ -1987,7 +1982,7 @@
 	display: block;
 	width: 1px;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
+	background: #eee(0, 0, 0, 0.1);
 	position: absolute;
 	left: 35%;
 	top: 0;
@@ -2003,7 +1998,7 @@
 	background: #252525;
 	border-radius: 50%;
 	text-align: center;
-	color: #252525;
+	color: #FFFFFF;
 	position: absolute;
 	left: 35%;
 	top: .9rem;
@@ -2027,7 +2022,7 @@
 #studies .timeline-header p {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.6rem;
-	color: #888888;
+	color: #eee;
 }
 #studies .timeline-content {
 	margin-left: 35%;
@@ -2042,7 +2037,7 @@
 	display: block;
 	height: 3px;
 	width: 50px;
-	background: rgba(0, 0, 0, 0.2);
+	background: #eee(0, 0, 0, 0.2);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -2155,7 +2150,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -2171,7 +2166,7 @@
 	 background: #252525;
 	 border-radius: 50%;
 	 text-align: center;
-	 color: #252525;
+	 color: #FFFFFF;
 	 position: absolute;
 	 left: 35%;
 	 top: .9rem;
@@ -2195,7 +2190,7 @@
  #resume .timeline-header p {
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.6rem;
-	 color: #888888;
+	 color: #eee;
  }
  #resume .timeline-content {
 	 margin-left: 35%;
@@ -2298,7 +2293,7 @@
   */
  .popup-modal {
 	 max-width: 550px;
-	 background: #252525;
+	 background: #FFFFFF;
 	 position: relative;
 	 margin: 0 auto;
  }
@@ -2331,7 +2326,7 @@
 	 letter-spacing: .1rem;
 	 display: block;
 	 text-align: left;
-	 color: rgba(0, 0, 0, 0.5);
+	 color: #eee(0, 0, 0, 0.5);
  }
  .popup-modal .link-box {
 	 width: 100%;
@@ -2342,7 +2337,7 @@
 	 font-family: "poppins-bold", sans-serif;
 	 font-size: 1.2rem;
 	 line-height: 6rem;
-	 color: #252525;
+	 color: #FFFFFF;
 	 text-transform: uppercase;
 	 letter-spacing: 3px;
 	 cursor: pointer;
@@ -2357,7 +2352,7 @@
 	 transition: all 0.3s ease-in-out;
  }
  .popup-modal .link-box a:first-child {
-	 border-right: 1px solid rgba(200, 200, 200, 0.1);
+	 border-right: 1px solid #eee(200, 200, 200, 0.1);
  }
  .popup-modal .link-box a:hover {
 	 background: #cc005f;
@@ -2436,7 +2431,7 @@
 	 text-align: center;
  }
  #cta p.lead {
-	 color: #6e6e6e;
+	 color: #eee;
  }
  .cta-content {
 	 max-width: 640px;
@@ -2471,10 +2466,10 @@
 	 margin-left: -40px;
  }
  .section-ads h2 a, .section-ads h2 a:visited {
-	 color: #313131;
+	 color: #eee;
  }
  .section-ads span {
-	 color: #3F0D39;
+	 color: #eee;
  }
  
  /**
@@ -2505,7 +2500,7 @@
 	 background-size: cover;
 	 padding-top: 12rem;
 	 padding-bottom: 12rem;
-	 color: #252525;
+	 color: white;
 	 position: relative;
  }
  #services .overlay {
@@ -2523,7 +2518,7 @@
  }
  
  #services .section-intro h1 {
-	 color: #252525;
+	 color: white;
  }
  #services .section-intro h5 {
 	 color: #FF0077;
@@ -2596,7 +2591,7 @@
 	 max-width: 1440px;
  }
  #stats .stat {
-	 border-left: 1px solid rgba(255, 255, 255, 0.12);
+	 border-left: 1px solid #eee(255, 255, 255, 0.12);
 	 min-height: 17.4rem;
  }
  #stats .stat:first-child {
@@ -2615,7 +2610,7 @@
 	 color: white;
  }
  #stats .stat-title {
-	 color: rgba(255, 255, 255, 0.5);
+	 color: #eee(255, 255, 255, 0.5);
  }
  
  /**
@@ -2634,7 +2629,7 @@
  }
  @media only screen and (max-width:768px) {
 	 #stats .stat:nth-child(n) {
-		 border-left: 1px solid rgba(255, 255, 255, 0.12);
+		 border-left: 1px solid #eee(255, 255, 255, 0.12);
 	 }
 	 #stats .stat:nth-child(2n+1) {
 		 border: none;
