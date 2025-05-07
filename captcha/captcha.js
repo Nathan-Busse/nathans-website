@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click event to verify and open PDF
     captchaButton.addEventListener("click", function () {
         if (confirm("Please confirm you're human.")) {
-            window.open("/../Assets/CV/cv.html", "_blank");
+            window.open("/../../Assets/CV/Resume.pdf", "_blank");
         }
     });
 
