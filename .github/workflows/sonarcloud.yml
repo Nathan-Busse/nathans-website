@@ -55,8 +55,8 @@ jobs:
           args:
             # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
             # mandatory
-            -Dsonar.projectKey="1d80983a1e81d7f054f3f259295039b0aeac028d"
-            -Dsonar.organization="4090c3f6d2a1b0e5de4df70c59960747e5f89dbf"
+            -Dsonar.projectKey="Nathan-Busse_nathan-busse.github.io"
+            -Dsonar.organization="nathan-busse"
             # Comma-separated paths to directories containing main source files.
             #-Dsonar.sources= # optional, default is project base directory
             # Comma-separated paths to directories containing test source files.
