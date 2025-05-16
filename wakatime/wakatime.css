@@ -1,6 +1,5 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 :root {
     --primary-color: #1e1e2e;
@@ -117,34 +116,28 @@ footer {
     }
 }
 
-    /* Updated Floating Home Button styling */
-    .floating-home-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #636466;
-      color: rgb(233, 238, 233);
-      border: none;
-      /* Set fixed dimensions for a 40px x 40px button */
-      width: 80px;
-      height: 80px;
-      /* Center the Font Awesome icon inside */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* Increase font size so the icon is appropriately large */
-      font-size: 40px;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  
-    .floating-home-button:hover {
-      background-color: rgb(44, 46, 44);
-      transform: scale(1.1);
-    }
-  
-    .floating-home-button:active {
-      transform: scale(1);
-    }
+/* Floating Back to Home Button */
+.floating-home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #89b4fa;
+    color: #1e1e2e;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-home-button:hover {
+    background-color: #6e9bdc;
+    transform: scale(1.1);
+}
+
+.floating-home-button:active {
+    transform: scale(1);
+}
