@@ -1,0 +1,22 @@
+.progress-container {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-liquid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00aaff, #0077cc);
+    animation: slosh 2s infinite ease-in-out;
+}
+
+@keyframes slosh {
+    0% { transform: translateY(10px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
