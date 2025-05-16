@@ -17,8 +17,11 @@
       background: #222;
       color: #fff;
       font-family: Arial, sans-serif;
+      display: -webkit-flex;
       display: flex;
+      -webkit-flex-direction: column;
       flex-direction: column;
+      -webkit-align-items: center;
       align-items: center;
       padding: 20px;
     }
@@ -39,7 +42,7 @@
 
     /* Code typewriter animation styling */
     #code-animation {
-      max-width: 8%;
+      width: 90%;
       margin: 0 auto 20px;
     }
     #code-animation pre {
@@ -54,66 +57,86 @@
       border-right: 2px solid rgba(255,255,255,0.75);
       width: 0;
       margin: 0 auto;
+      -webkit-animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
       animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @-webkit-keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
     }
     @keyframes typing {
       from { width: 0; }
-      to { width: 100%; }
+      to   { width: 100%; }
+    }
+    @-webkit-keyframes blink {
+      from, to { border-color: transparent; }
+      50%    { border-color: rgba(255,255,255,0.75); }
     }
     @keyframes blink {
       from, to { border-color: transparent; }
-      50% { border-color: rgba(255,255,255,0.75); }
+      50%    { border-color: rgba(255,255,255,0.75); }
     }
 
     /* Countdown timer container styling */
     .countdown-container {
+      display: -webkit-flex;
       display: flex;
-      gap: 20px;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .countdown-box {
+    .countdown-container .countdown-box {
       background: #333;
       padding: 20px;
       border-radius: 20px;
       text-align: center;
-      width: 40px;
-      height: 40px;
+      min-width: 70px;
+      min-height: 70px;
+      margin: 0 10px;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
       animation: glow 1s ease-in-out infinite alternate;
     }
-    .countdown-box span {
+    .countdown-container .countdown-box span {
       display: block;
       font-size: 1rem;
       font-weight: bold;
     }
-    .countdown-box label {
-      font-size: 2rem;
+    .countdown-container .countdown-box label {
+      font-size: 1rem;
       color: #aaa;
-      text-align: center;
-      
       margin-top: 5px;
       text-transform: uppercase;
     }
 
     /* Flip animation for number updates */
+    @-webkit-keyframes flip {
+      0%   { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+      50%  { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+      100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+    }
     @keyframes flip {
-      0%   { transform: rotateX(0deg); }
-      50%  { transform: rotateX(90deg); }
-      100% { transform: rotateX(0deg); }
+      0%   { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+      50%  { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+      100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
     }
     .animate {
+      -webkit-animation: flip 0.5s ease-in-out;
       animation: flip 0.5s ease-in-out;
     }
 
     /* Glow animation for countdown boxes */
+    @-webkit-keyframes glow {
+      0% { -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+      100% { -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    }
     @keyframes glow {
-      0% {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-      }
-      100% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-      }
+      0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+      100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
     }
 
-    /* Updated Floating Home Button styling */
+    /* Floating Home Button styling */
     .floating-home-button {
       position: fixed;
       bottom: 20px;
@@ -121,45 +144,72 @@
       background-color: #636466;
       color: rgb(233, 238, 233);
       border: none;
-      /* Set fixed dimensions for a 40px x 40px button */
       width: 40px;
       height: 40px;
-      /* Center the Font Awesome icon inside */
+      display: -webkit-flex;
       display: flex;
+      -webkit-align-items: center;
       align-items: center;
+      -webkit-justify-content: center;
       justify-content: center;
-      /* Increase font size so the icon is appropriately large */
       font-size: 30px;
       border-radius: 30px;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
-  
     .floating-home-button:hover {
       background-color: rgb(44, 46, 44);
+      -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
-  
     .floating-home-button:active {
+      -webkit-transform: scale(1);
       transform: scale(1);
+    }
+
+    /* Media Query for smaller devices (e.g. iPad2 portrait) */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      #code-animation pre {
+        font-size: 0.9rem;
+      }
+      .countdown-container .countdown-box {
+        padding: 10px;
+        margin: 5px;
+        min-width: 60px;
+        min-height: 60px;
+      }
+      .countdown-container .countdown-box span {
+        font-size: 0.8rem;
+      }
+      .countdown-container .countdown-box label {
+        font-size: 0.8rem;
+      }
+      .floating-home-button {
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Page under construction</h1>
+    <p>Get ready for something unique</p>
   </header>
   
   <!-- Code typewriter animation area -->
   <div id="code-animation">
-    <div><pre><h2>/* Before you go please enjoy this unique page while you note the time remaining... */
-    </h2>
-  </pre>
-</div>
-</div>
-<br>
-  <br>
+    <pre>/* Before you go, please enjoy this unique page while you note the time remaining... */</pre>
+  </div>
+  
   <!-- Countdown timer display -->
   <div class="countdown-container">
     <div class="countdown-box">
