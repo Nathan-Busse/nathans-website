@@ -1,0 +1,29 @@
+{
+  "name": "nathan-busse.github.io",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nathan-Busse/nathan-busse.github.io.git"
+  },
+  "keywords": [
+    "nathan-busse.github.io"
+  ],
+  "author": "Nathan-Busse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nathan-Busse/nathan-busse.github.io/issues"
+  },
+  "homepage": "https://github.com/Nathan-Busse/nathan-busse.github.io#readme",
+  "dependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "lucide": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
