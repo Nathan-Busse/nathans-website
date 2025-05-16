@@ -1,0 +1,17 @@
+#typewriter {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+#typewriter span {
+  display: inline-block;
+  opacity: 0;
+  animation: typing 2s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
