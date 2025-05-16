@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studies Countdown Timer</title>
+  <!-- Include Font Awesome stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Reset and basic global styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    /* Header styling */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 20px 0 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    /* Code typewriter animation styling */
+    #code-animation {
+      width: 90%;
+      margin: 0 auto 20px;
+    }
+    #code-animation pre {
+      background: #1d1f21;
+      padding: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      color: #0f0;
+      border-right: 2px solid rgba(255,255,255,0.75);
+      width: 0;
+      margin: 0 auto;
+      -webkit-animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @-webkit-keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+    @-webkit-keyframes blink {
+      from, to { border-color: transparent; }
+      50%    { border-color: rgba(255,255,255,0.75); }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50%    { border-color: rgba(255,255,255,0.75); }
+    }
+
+    /* Countdown timer container styling */
+    .countdown-container {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .countdown-container .countdown-box {
+      background: #333;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      min-width: 70px;
+      min-height: 70px;
+      margin: 0 10px;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+    .countdown-container .countdown-box span {
+      display: block;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .countdown-container .countdown-box label {
+      font-size: 1rem;
+      color: #aaa;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    /* Flip animation for number updates */
+    @-webkit-keyframes flip {
+      0%   { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+      50%  { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+      100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+    }
+    @keyframes flip {
+      0%   { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+      50%  { -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+      100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+    }
+    .animate {
+      -webkit-animation: flip 0.5s ease-in-out;
+      animation: flip 0.5s ease-in-out;
+    }
+
+    /* Glow animation for countdown boxes */
+    @-webkit-keyframes glow {
+      0% { -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+      100% { -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+      100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    }
+
+    /* Floating Home Button styling */
+    .floating-home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #636466;
+      color: rgb(233, 238, 233);
+      border: none;
+      width: 40px;
+      height: 40px;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      font-size: 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .floating-home-button:hover {
+      background-color: rgb(44, 46, 44);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    .floating-home-button:active {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    /* Media Query for smaller devices (e.g. iPad2 portrait) */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      #code-animation pre {
+        font-size: 0.9rem;
+      }
+      .countdown-container .countdown-box {
+        padding: 10px;
+        margin: 5px;
+        min-width: 60px;
+        min-height: 60px;
+      }
+      .countdown-container .countdown-box span {
+        font-size: 0.8rem;
+      }
+      .countdown-container .countdown-box label {
+        font-size: 0.8rem;
+      }
+      .floating-home-button {
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Page under construction</h1>
+    <p>Get ready for something unique</p>
+  </header>
+  
+  <!-- Code typewriter animation area -->
+  <div id="code-animation">
+    <pre>/* Before you go, please enjoy this unique page while you note the time remaining... */</pre>
+  </div>
+  
+  <!-- Countdown timer display -->
+  <div class="countdown-container">
+    <div class="countdown-box">
+      <span id="days">00</span>
+      <label>Days</label>
+    </div>
+    <div class="countdown-box">
+      <span id="hours">00</span>
+      <label>Hours</label>
+    </div>
+    <div class="countdown-box">
+      <span id="minutes">00</span>
+      <label>Minutes</label>
+    </div>
+    <div class="countdown-box">
+      <span id="seconds">00</span>
+      <label>Seconds</label>
+    </div>
+  </div>
+
+  <!-- JavaScript to update the countdown -->
+  <script>
+    // Set target date (adjust this as needed)
+    const countDownDate = new Date("December 31, 2025 23:59:59").getTime();
+
+    // Update countdown every second
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      
+      // Calculate time components
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the results with a leading zero if necessary
+      document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+      document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+
+      // Add a flip animation to the number update for a dynamic effect
+      const boxes = document.querySelectorAll('.countdown-box span');
+      boxes.forEach(box => {
+        box.classList.add('animate');
+        setTimeout(() => {
+          box.classList.remove('animate');
+        }, 500);
+      });
+
+      // If the countdown is complete, clear the interval and show a message
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.querySelector(".countdown-container").innerHTML = "<h2>Time's up!</h2>";
+      }
+    }, 1000);
+  </script>
+  
+  <!-- Floating Back to Home Button -->
+  <button class="floating-home-button fa fa-home" onclick="goHome()" aria-hidden="true"></button>
+
+  <script>
+    function goHome() {
+      window.location.href = "https://nathan-busse.github.io";
+    }
+  </script>
+</body>
+</html>
