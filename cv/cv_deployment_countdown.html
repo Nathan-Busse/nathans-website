@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Studies Countdown Timer</title>
+  <!-- Include Font Awesome stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     /* Reset and basic global styles */
     * {
@@ -50,7 +52,7 @@
       font-size: 1rem;
       color: #0f0;
       border-right: 2px solid rgba(255,255,255,0.75);
-      width: 0; /* Start with no width */
+      width: 0;
       margin: 0 auto;
       animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
     }
@@ -66,25 +68,27 @@
     /* Countdown timer container styling */
     .countdown-container {
       display: flex;
-      gap: 20px;
+      gap: 40px;
     }
     .countdown-box {
       background: #333;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 170px;
+      border-radius: 20px;
       text-align: center;
-      width: 80px;
-      /* Continuous glow animation */
+      width: 400px;
+      height: 400px;
       animation: glow 1s ease-in-out infinite alternate;
     }
     .countdown-box span {
       display: block;
-      font-size: 2rem;
+      font-size: 5rem;
       font-weight: bold;
     }
     .countdown-box label {
-      font-size: 0.8rem;
+      font-size: 2rem;
       color: #aaa;
+      text-align: center;
+      
       margin-top: 5px;
       text-transform: uppercase;
     }
@@ -108,20 +112,54 @@
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
       }
     }
+
+    /* Updated Floating Home Button styling */
+    .floating-home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #636466;
+      color: rgb(233, 238, 233);
+      border: none;
+      /* Set fixed dimensions for a 40px x 40px button */
+      width: 80px;
+      height: 80px;
+      /* Center the Font Awesome icon inside */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Increase font size so the icon is appropriately large */
+      font-size: 40px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .floating-home-button:hover {
+      background-color: rgb(44, 46, 44);
+      transform: scale(1.1);
+    }
+  
+    .floating-home-button:active {
+      transform: scale(1);
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>CV</h1>
-    <p>This page is in development</p>
+    <h1>Page under construction</h1>
   </header>
   
   <!-- Code typewriter animation area -->
   <div id="code-animation">
-    <pre>/* Before you go please enjoy this unique page while you note the time remaining... */
-    </pre>
-  </div>
-
+    <div><pre><h2>/* Before you go please enjoy this unique page while you note the time remaining... */
+    </h2>
+  </pre>
+</div>
+</div>
+<br>
+  <br>
   <!-- Countdown timer display -->
   <div class="countdown-container">
     <div class="countdown-box">
@@ -180,14 +218,14 @@
       }
     }, 1000);
   </script>
+  
   <!-- Floating Back to Home Button -->
-  <button class="floating-home-button" onclick="goHome()">← Home</button>
+  <button class="floating-home-button fa fa-home" onclick="goHome()" aria-hidden="true"></button>
 
   <script>
-      function goHome() {
-        window.location.href = "https://nathan-busse.github.io";
-      }
+    function goHome() {
+      window.location.href = "https://nathan-busse.github.io";
+    }
   </script>
-
 </body>
 </html>
