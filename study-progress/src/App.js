@@ -14,7 +14,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="opener noreferrer"
         >
           Here is a cool site to help me learn more about React!
         </a>
