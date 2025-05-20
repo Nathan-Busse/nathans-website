@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sliding Carousel Example</title>
+  <title>AWS Image Carousel</title>
   <style>
     /* Carousel container styles */
     .carousel {
-      width: 300px; /* Adjust width as needed */
+      width: 320px; /* Adjust width as needed */
       margin: 50px auto;
       overflow: hidden;
-      border: 1px solid #ccc;
       position: relative;
+      border: 1px solid #ccc;
       background: #fff;
       border-radius: 5px;
     }
@@ -21,15 +21,17 @@
       transition: transform 0.5s ease; /* Smooth sliding animation */
     }
 
-    /* Each card in the carousel */
+    /* Each card (slide) in the carousel */
     .carousel-card {
-      min-width: 300px; /* Match the carousel container width */
-      margin-right: 10px; /* Optional spacing between cards */
-      background-color: #f8f8f8;
-      padding: 20px;
+      min-width: 300px; /* Matching the carousel container width */
+      margin-right: 10px; /* Adjust spacing between slides if needed */
       box-sizing: border-box;
-      text-align: center;
-      font-size: 24px;
+    }
+
+    /* Ensure the images fill the slide */
+    .carousel-card img {
+      width: 100%;
+      display: block;
       border-radius: 3px;
     }
 
@@ -60,10 +62,18 @@
     <button class="carousel-button prev">&#60;</button>
     <div class="carousel-track-container">
       <div class="carousel-track">
-        <div class="carousel-card">Card 1</div>
-        <div class="carousel-card">Card 2</div>
-        <div class="carousel-card">Card 3</div>
-        <div class="carousel-card">Card 4</div>
+        <div class="carousel-card">
+          <img src="aws.png" alt="AWS Image 1">
+        </div>
+        <div class="carousel-card">
+          <img src="aws2.png" alt="AWS Image 2">
+        </div>
+        <div class="carousel-card">
+          <img src="aws3.png" alt="AWS Image 3">
+        </div>
+        <div class="carousel-card">
+          <img src="aws4.png" alt="AWS Image 4">
+        </div>
       </div>
     </div>
     <button class="carousel-button next">&#62;</button>
@@ -75,19 +85,19 @@
     const nextButton = document.querySelector('.carousel-button.next');
     const prevButton = document.querySelector('.carousel-button.prev');
 
-    // Determine the width of one card (assumes all cards are the same width)
+    // Calculate the width of a single card (including margin-right)
     const cardWidth = cards[0].getBoundingClientRect().width;
 
-    // Position each card next to one another by setting its left offset.
+    // Position each card next to one another horizontally.
     cards.forEach((card, index) => {
-      card.style.left = (cardWidth + 10) * index + 'px'; // adding margin-right (10px) if needed
+      card.style.left = (cardWidth + 10) * index + 'px';
     });
 
     let currentCardIndex = 0;
 
-    // Function to move the track to the desired card index.
+    // Function to slide to the desired card
     function moveToCard(index) {
-      const amountToMove = -(cardWidth + 10) * index;
+      const amountToMove = -((cardWidth + 10) * index);
       track.style.transform = `translateX(${amountToMove}px)`;
       currentCardIndex = index;
     }
@@ -97,7 +107,7 @@
       if (currentCardIndex < cards.length - 1) {
         moveToCard(currentCardIndex + 1);
       } else {
-        // Optional: Loop back to the start.
+        // Loop back to the first card
         moveToCard(0);
       }
     });
@@ -107,7 +117,7 @@
       if (currentCardIndex > 0) {
         moveToCard(currentCardIndex - 1);
       } else {
-        // Optional: Loop back to the last card.
+        // Loop back to the last card
         moveToCard(cards.length - 1);
       }
     });
