@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AWS Image Carousel</title>
+  <title>Image Carousel Example</title>
   <style>
     /* Carousel container styles */
     .carousel {
-      width: 320px; /* Adjust width as needed */
+      width: 320px;
       margin: 50px auto;
       overflow: hidden;
-      position: relative;
       border: 1px solid #ccc;
+      position: relative;
       background: #fff;
       border-radius: 5px;
     }
@@ -18,17 +18,19 @@
     /* The track that holds the cards */
     .carousel-track {
       display: flex;
-      transition: transform 0.5s ease; /* Smooth sliding animation */
+      transition: transform 0.5s ease;
     }
 
-    /* Each card (slide) in the carousel */
+    /* Each card in the carousel */
     .carousel-card {
-      min-width: 300px; /* Matching the carousel container width */
-      margin-right: 10px; /* Adjust spacing between slides if needed */
+      min-width: 300px;
+      margin-right: 10px;
+      padding: 0;
       box-sizing: border-box;
+      border-radius: 3px;
     }
 
-    /* Ensure the images fill the slide */
+    /* Ensure images fit nicely */
     .carousel-card img {
       width: 100%;
       display: block;
@@ -59,24 +61,24 @@
 </head>
 <body>
   <div class="carousel">
-    <button class="carousel-button prev">&#60;</button>
+    <button class="carousel-button prev" aria-label="Previous image">&#60;</button>
     <div class="carousel-track-container">
       <div class="carousel-track">
         <div class="carousel-card">
-          <img src="aws.png" alt="AWS Image 1">
+          <img src="Assets/certs/aws.png" alt="AWS Certificate">
         </div>
         <div class="carousel-card">
-          <img src="aws2.png" alt="AWS Image 2">
+          <img src="Assets/certs/azure.png" alt="Azure Certificate">
         </div>
         <div class="carousel-card">
-          <img src="aws3.png" alt="AWS Image 3">
+          <img src="Assets/certs/gcp.png" alt="GCP Certificate">
         </div>
         <div class="carousel-card">
-          <img src="aws4.png" alt="AWS Image 4">
+          <img src="Assets/certs/linux.png" alt="Linux Certificate">
         </div>
       </div>
     </div>
-    <button class="carousel-button next">&#62;</button>
+    <button class="carousel-button next" aria-label="Next image">&#62;</button>
   </div>
 
   <script>
@@ -85,41 +87,44 @@
     const nextButton = document.querySelector('.carousel-button.next');
     const prevButton = document.querySelector('.carousel-button.prev');
 
-    // Calculate the width of a single card (including margin-right)
-    const cardWidth = cards[0].getBoundingClientRect().width;
+    let cardWidth = cards[0].getBoundingClientRect().width;
 
-    // Position each card next to one another horizontally.
+    // Position each card
     cards.forEach((card, index) => {
       card.style.left = (cardWidth + 10) * index + 'px';
     });
 
     let currentCardIndex = 0;
 
-    // Function to slide to the desired card
     function moveToCard(index) {
-      const amountToMove = -((cardWidth + 10) * index);
+      const amountToMove = -(cardWidth + 10) * index;
       track.style.transform = `translateX(${amountToMove}px)`;
       currentCardIndex = index;
     }
 
-    // Event listener for the next button
     nextButton.addEventListener('click', () => {
       if (currentCardIndex < cards.length - 1) {
         moveToCard(currentCardIndex + 1);
       } else {
-        // Loop back to the first card
         moveToCard(0);
       }
     });
 
-    // Event listener for the previous button
     prevButton.addEventListener('click', () => {
       if (currentCardIndex > 0) {
         moveToCard(currentCardIndex - 1);
       } else {
-        // Loop back to the last card
         moveToCard(cards.length - 1);
       }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].getBoundingClientRect().width;
+      cards.forEach((card, index) => {
+        card.style.left = (cardWidth + 10) * index + 'px';
+      });
+      moveToCard(currentCardIndex);
     });
   </script>
 </body>
