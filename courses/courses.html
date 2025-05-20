@@ -1,1 +1,116 @@
-npx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sliding Carousel Example</title>
+  <style>
+    /* Carousel container styles */
+    .carousel {
+      width: 300px; /* Adjust width as needed */
+      margin: 50px auto;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      position: relative;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    /* The track that holds the cards */
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease; /* Smooth sliding animation */
+    }
+
+    /* Each card in the carousel */
+    .carousel-card {
+      min-width: 300px; /* Match the carousel container width */
+      margin-right: 10px; /* Optional spacing between cards */
+      background-color: #f8f8f8;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 24px;
+      border-radius: 3px;
+    }
+
+    /* Navigation arrow buttons */
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .carousel-button.prev {
+      left: 10px;
+    }
+    .carousel-button.next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <button class="carousel-button prev">&#60;</button>
+    <div class="carousel-track-container">
+      <div class="carousel-track">
+        <div class="carousel-card">Card 1</div>
+        <div class="carousel-card">Card 2</div>
+        <div class="carousel-card">Card 3</div>
+        <div class="carousel-card">Card 4</div>
+      </div>
+    </div>
+    <button class="carousel-button next">&#62;</button>
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const cards = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
+
+    // Determine the width of one card (assumes all cards are the same width)
+    const cardWidth = cards[0].getBoundingClientRect().width;
+
+    // Position each card next to one another by setting its left offset.
+    cards.forEach((card, index) => {
+      card.style.left = (cardWidth + 10) * index + 'px'; // adding margin-right (10px) if needed
+    });
+
+    let currentCardIndex = 0;
+
+    // Function to move the track to the desired card index.
+    function moveToCard(index) {
+      const amountToMove = -(cardWidth + 10) * index;
+      track.style.transform = `translateX(${amountToMove}px)`;
+      currentCardIndex = index;
+    }
+
+    // Event listener for the next button
+    nextButton.addEventListener('click', () => {
+      if (currentCardIndex < cards.length - 1) {
+        moveToCard(currentCardIndex + 1);
+      } else {
+        // Optional: Loop back to the start.
+        moveToCard(0);
+      }
+    });
+
+    // Event listener for the previous button
+    prevButton.addEventListener('click', () => {
+      if (currentCardIndex > 0) {
+        moveToCard(currentCardIndex - 1);
+      } else {
+        // Optional: Loop back to the last card.
+        moveToCard(cards.length - 1);
+      }
+    });
+  </script>
+</body>
+</html>
