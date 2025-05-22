@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #121212, #252525);
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.certifications {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.tile {
+    width: 200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.tile img {
+    width: 100%;
+    border-radius: 5px;
+}
