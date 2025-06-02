@@ -36,6 +36,13 @@ body {
     border-radius: 5px;
 }
 
+.tile flip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
     /* Floating Home Button styling */
     .floating-home-button {
       position: fixed;
