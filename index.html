@@ -3,15 +3,19 @@
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <!--<![endif]-->
 <html class="no-js" lang="en">
+
 <head>
 
 
    <!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
-	<title>Nathan Busse</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nathan Graham Busse | Architect of the Future</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<meta name="description" content="">  
+<meta name="author" content="">
 
    <!-- mobile specific metas
    ================================================== -->
@@ -31,6 +35,99 @@
    <!-- favicons
 	================================================== -->
 	<link rel="icon" type="Assets/images/" href="favicon.jpg">
+
+ <style>
+    :root {
+      --primary-color: #00ffe7;
+      --bg-color: #0e0e0e;
+      --text-color: #e0e0e0;
+      --accent: #ff0077;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg-color);
+      font-family: 'Roboto Mono', monospace;
+      color: var(--text-color);
+      line-height: 1.7;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--primary-color);
+    }
+
+
+
+    .top-intro {
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .top-intro h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px var(--primary-color);
+    }
+	.top-intro em {
+	  font-size: 4.2rem;
+	  margin: 1rem 0;
+	}
+
+    .section {
+      margin: 4rem auto;
+      max-width: 1000px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .highlight {
+      color: var(--accent);
+    }
+
+    .divider {
+      margin: 3rem 0;
+      border: 1px solid var(--primary-color);
+      box-shadow: 0 0 10px var(--primary-color);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 5rem;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      color: var(--accent);
+    }
+  </style>
 
 </head>
 
@@ -71,16 +168,13 @@
 	   <div class="intro-content">
 		   <div class="row">
 			   <div class="col-twelve">
-				   <h5>Hello, World.</h5>
-				   <h1>I'm Nathan Busse.</h1>
-				   <p class="intro-position">
-					   <span>Freelancer</span>
-					   <span>Genius</span>
-					   <span>Inventor</span>
-					   <span>Programmer</span>
-					   <span>Technologist</span>
-					   <span>Visionary</span>
-					</p>
+				<div class="top-intro">
+    			<h1>🌌 Nathan Busse:</h1>
+				<p><em><h1>“Reality’s Tony Stark in the Making”</h1></em></p>				
+				
+				<p class="intro-position">
+				
+				</p>
 				   <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
 			   </div>
 		   </div>
