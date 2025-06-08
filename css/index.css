@@ -30,175 +30,11 @@
  *
  * ------------------------------------------------------------------- 
  */
-@import url("fonts.css");
-@import url("font-awesome/css/font-awesome.min.css");
-@import url("micons/micons.css");
-@import url("poppins/poppins.css");
-@import url("lora/lora.css");
-@import url("lora/lora-italic.css");
-@import url("lora/lora-bold.css");
-@import url("lora/lora-regular.css");
-@import url("lora/lora-semibold.css");
-@import url("lora/lora-light.css");
-@import url("lora/lora-light-italic.css");
-@import url("lora/lora-semibold-italic.css");
-@import url("lora/lora-bold-italic.css");
-@import url("lora/lora-regular-italic.css");
-@import url("lora/lora-semibold-regular.css");
-@import url("lora/lora-bold-regular.css");
-@import url("lora/lora-light-regular.css");
-@import url("lora/lora-semibold-light.css");
-@import url("lora/lora-bold-light.css");
-@import url("lora/lora-regular-light.css");
-@import url("lora/lora-italic-light.css");
-@import url("lora/lora-semibold-italic-light.css");
-@import url("lora/lora-bold-italic-light.css");
-@import url("lora/lora-regular-italic-light.css");
-@import url("lora/lora-semibold-regular-light.css");
-@import url("lora/lora-bold-regular-light.css");
-@import url("lora/lora-light-regular-light.css");
-@import url("lora/lora-semibold-light-regular.css");
-@import url("lora/lora-bold-light-regular.css");
-@import url("lora/lora-regular-light-italic.css");
-@import url("lora/lora-semibold-light-italic.css");
-@import url("lora/lora-bold-light-italic.css");
-@import url("lora/lora-regular-light-italic.css");
-@import url("lora/lora-semibold-light-regular-italic.css");
-@import url("lora/lora-bold-light-regular-italic.css");
-@import url("lora/lora-light-regular-italic.css");
-@import url("lora/lora-semibold-regular-italic.css");	
-@import url("lora/lora-bold-regular-italic.css");
-@import url("lora/lora-regular-italic-light.css");
-@import url("lora/lora-semibold-italic-light.css");
-@import url("lora/lora-bold-italic-light.css");
-@import url("lora/lora-regular-italic-light.css");
-@import url("lora/lora-semibold-regular-light-italic.css");
-@import url("lora/lora-bold-regular-light-italic.css");
-@import url("lora/lora-light-regular-light-italic.css");
-@import url("lora/lora-semibold-light-regular-italic.css");
-@import url("lora/lora-bold-light-regular-italic.css");
-@import url("lora/lora-regular-light-italic-light.css");
-@import url("lora/lora-semibold-light-italic-light.css");
-@import url("lora/lora-bold-light-italic-light.css");
-@import url("lora/lora-regular-light-italic-light.css");
-@import url("lora/lora-semibold-regular-light-italic.css");
-@import url("lora/lora-bold-regular-light-italic.css");
-@import url("lora/lora-light-regular-light-italic.css");
-@import url("lora/lora-semibold-light-regular-italic.css");
-@import url("lora/lora-bold-light-regular-italic.css");
-@import url("lora/lora-regular-light-italic-light.css");
-@import url("lora/lora-semibold-light-italic-light.css");
-@import url("lora/lora-bold-light-italic-light.css");
-@import url("lora/lora-regular-light-italic-light.css");
-@import url("lora/lora-semibold-regular-light-italic.css");
-@import url("lora/lora-bold-regular-light-italic.css");
-@import url("lora/lora-light-regular-light-italic.css");
-@import url("lora/lora-semibold-light-regular-italic.css");
-@import url("lora/lora-bold-light-regular-italic.css");
-@import url("lora/lora-regular-light-italic-light.css");
-@import url("lora/lora-semibold-light-italic-light.css");
-@import url("lora/lora-bold-light-italic-light.css");
-
-
+ @import url("fonts.css");
+ @import url("font-awesome/css/font-awesome.min.css");
+ @import url("micons/micons.css");
  
-@impoert url("pace/pace.css");
-@import url("pace/pace-theme-minimal.css");
-@import url("pace/pace-theme-flash.css");
-@import url("pace/pace-theme-barber-shop.css");
-@import url("pace/pace-theme-big-counter.css");
-@import url("pace/pace-theme-center-atom.css");
-@import url("pace/pace-theme-center-circle.css");
-@import url("pace/pace-theme-center-rectangle.css");
-@import url("pace/pace-theme-corner-indicator.css");
-@import url("pace/pace-theme-loading-bar.css");
-@import url("pace/pace-theme-mac-osx.css");
-@import url("pace/pace-theme-minimal.css");
-@import url("pace/pace-theme-morpheus.css");
-@import url("pace/pace-theme-modern.css");
-@import url("pace/pace-theme-orbit.css");
-@import url("pace/pace-theme-rails.css");
-@import url("pace/pace-theme-simple.css");
-@import url("pace/pace-theme-slash.css");
-@import url("pace/pace-theme-spotlight.css");
-@import url("pace/pace-theme-standart.css");
-@import url("pace/pace-theme-zoom-in.css");
-@import url("pace/pace-theme-zoom-out.css");
-@import url("pace/pace-theme-ghost.css");
-@import url("pace/pace-theme-ghost-2.css");
-@import url("pace/pace-theme-ghost-3.css");
-@import url("pace/pace-theme-ghost-4.css");
-@import url("pace/pace-theme-ghost-5.css");
-@import url("pace/pace-theme-ghost-6.css");
-@import url("pace/pace-theme-ghost-7.css");
-@import url("pace/pace-theme-ghost-8.css");
-@import url("pace/pace-theme-ghost-9.css");
-@import url("pace/pace-theme-ghost-10.css");
-@import url("pace/pace-theme-ghost-11.css");
-@import url("pace/pace-theme-ghost-12.css");
-@import url("pace/pace-theme-ghost-13.css");
-@import url("pace/pace-theme-ghost-14.css");
-@import url("pace/pace-theme-ghost-15.css");
-@import url("pace/pace-theme-ghost-16.css");
-@import url("pace/pace-theme-ghost-17.css");
-@import url("pace/pace-theme-ghost-18.css");
-@import url("pace/pace-theme-ghost-19.css");
-@import url("pace/pace-theme-ghost-20.css");
-@import url("pace/pace-theme-ghost-21.css");
-@import url("pace/pace-theme-ghost-22.css");
-@import url("pace/pace-theme-ghost-23.css");
-@import url("pace/pace-theme-ghost-24.css");
-@import url("pace/pace-theme-ghost-25.css");
-@import url("pace/pace-theme-ghost-26.css");
-@import url("pace/pace-theme-ghost-27.css");
-@import url("pace/pace-theme-ghost-28.css");
-@import url("pace/pace-theme-ghost-29.css");
-@import url("pace/pace-theme-ghost-30.css");
-@import url("pace/pace-theme-ghost-31.css");
-@import url("pace/pace-theme-ghost-32.css");
-@import url("pace/pace-theme-ghost-33.css");
-@import url("pace/pace-theme-ghost-34.css");
-@import url("pace/pace-theme-ghost-35.css");
-@import url("pace/pace-theme-ghost-36.css");
-
-@import url("pace/pace-theme-ghost-37.css");
-@import url("pace/pace-theme-ghost-38.css");
-@import url("pace/pace-theme-ghost-39.css");
-@import url("pace/pace-theme-ghost-40.css");
-@import url("pace/pace-theme-ghost-41.css");
-@import url("pace/pace-theme-ghost-42.css");
-@import url("pace/pace-theme-ghost-43.css");
-@import url("pace/pace-theme-ghost-44.css");
-@import url("pace/pace-theme-ghost-45.css");
-@import url("pace/pace-theme-ghost-46.css");
-@import url("pace/pace-theme-ghost-47.css");
-@import url("pace/pace-theme-ghost-48.css");
-@import url("pace/pace-theme-ghost-49.css");
-@import url("pace/pace-theme-ghost-50.css");
-@import url("pace/pace-theme-ghost-51.css");
-@import url("pace/pace-theme-ghost-52.css");
-@import url("pace/pace-theme-ghost-53.css");
-
-@import url("pace/pace-theme-ghost-54.css");
-@import url("pace/pace-theme-ghost-55.css");
-@import url("pace/pace-theme-ghost-56.css");
-@import url("pace/pace-theme-ghost-57.css");
-@import url("pace/pace-theme-ghost-58.css");
-@import url("pace/pace-theme-ghost-59.css");
-@import url("pace/pace-theme-ghost-60.css");
-@import url("pace/pace-theme-ghost-61.css");
-@import url("pace/pace-theme-ghost-62.css");
-@import url("pace/pace-theme-ghost-63.css");
-@import url("pace/pace-theme-ghost-64.css");
-@import url("pace/pace-theme-ghost-65.css");
-@import url("pace/pace-theme-ghost-66.css");
-@import url("pace/pace-theme-ghost-67.css");
-@import url("pace/pace-theme-ghost-68.css");
-@import url("pace/pace-theme-ghost-69.css");
-@import url("pace/pace-theme-ghost-70.css");
-@import url("pace/pace-theme-ghost-71.css");
-
-
-
+ 
  /** 
   * ===================================================================
   * 02. base style overrides - (_document-setup.css)
@@ -229,9 +65,7 @@
 	 height: 100%;
  }
  body {
-	 /* background: url('motherboard.svg') no-repeat center center fixed;
-	 background-size: cover; */
-	 background: #0e0e0e; /* fallback color */
+	 background: #151515;
 	 font-family: "lora-regular", serif;
 	 font-size: 1.7rem;
 	 line-height: 3rem;
@@ -514,7 +348,7 @@
   * -------------------------------------------------------------------
   */
  button, .button {
-	 margin-bottom: 1.2rem;
+	 margin-bottom: 1.2;
  }
  fieldset {
 	 margin-bottom: 1.5rem;
@@ -685,6 +519,7 @@
 	 padding: 1.5rem 0;
 	 border: 0;
 	 outline: none;
+	 box-align: middle;
 	 color: #eee;
 	 font-family: "poppins-regular", sans-serif;
 	 font-size: 1.5rem;
@@ -1454,7 +1289,7 @@
   * ------------------------------------------------------------------- 
   */
  #intro {
-	 background: #151515 url(../assets/images/intro-bg.jpg) no-repeat;
+	 background: #151515 url(../assets/images/intro-bg.jp) no-repeat;
 	 -webkit-background-size: cover;
 	 -moz-background-size: cover;
 	 background-size: cover;
@@ -1466,16 +1301,6 @@
 	 position: relative;
 	 text-align: center;
  }
- #tron-grid-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: block;
-  pointer-events: none;
-}
  .intro-overlay {
 	 position: relative;
 	 top: 0;
@@ -1484,6 +1309,7 @@
 	 height: 100%;
 	 background: #111111;
 	 opacity: 0.9;
+	 opacity: 90%;
 	 
 	 /* Global values */
 	 opacity: inherit;
@@ -1541,18 +1367,18 @@
 	 text-align: center;
 	 display: inline-block;
 	 padding: 0 8px 0 14px;
-	 color: rgba(255, 255, 255, 0.3);
+	 color: #eee(255, 255, 255, 0.3);
  }
  .intro-content .intro-position span:first-child::before {
 	 content: "|";
 	 text-align: center;
 	 display: inline-block;
 	 padding: 0 14px 0 8px;
-	 color: rgba(255, 255, 255, 0.3);
+	 color: #eee(255, 255, 255, 0.3);
  }
  .intro-content .button {
 	 color: #eee !important;
-	 border-color: rgba(255, 255, 255, 0.3);
+	 border-color: #eee(255, 255, 255, 0.3);
 	 height: 6rem !important;
 	 line-height: 5.4rem !important;
 	 padding: 0 3.5rem 0 3rem !important;
@@ -1812,7 +1638,7 @@
  }
  
  #wakatime .wakatime-timeline {
-	 max-width: 1800px;
+	 max-width: 1800;
  }
  #wakatime .timeline-wrap {
 	 position: relative;
@@ -1824,7 +1650,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -1879,7 +1705,7 @@
 	 display: block;
 	 height: 3px;
 	 width: 50px;
-	 background: rgba(0, 0, 0, 0.2);
+	 background: #eee(0, 0, 0, 0.2);
 	 position: absolute;
 	 left: 0;
 	 bottom: 0;
@@ -1975,7 +1801,7 @@
  }
  
  #portfolio .portfolio-timeline {
-	 max-width: 1800px;
+	 max-width: 1800;
  }
  #portfolio .timeline-wrap {
 	 position: relative;
@@ -1987,7 +1813,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(0, 0, 0, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -2042,7 +1868,7 @@
 	 display: block;
 	 height: 3px;
 	 width: 50px;
-	 background: rgba(0, 0, 0, 0.2);
+	 background: #eee(0, 0, 0, 0.2);
 	 position: absolute;
 	 left: 0;
 	 bottom: 0;
@@ -2156,7 +1982,7 @@
 	display: block;
 	width: 1px;
 	height: 100%;
-	background: rgba(255, 255, 255, 0.1);
+	background: #eee(0, 0, 0, 0.1);
 	position: absolute;
 	left: 35%;
 	top: 0;
@@ -2211,7 +2037,7 @@
 	display: block;
 	height: 3px;
 	width: 50px;
-	background: rgba(255, 255, 255, 0.2);
+	background: #eee(0, 0, 0, 0.2);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -2324,7 +2150,7 @@
 	 display: block;
 	 width: 1px;
 	 height: 100%;
-	 background: rgba(255, 255, 255, 0.1);
+	 background: #eee(0, 0, 0, 0.1);
 	 position: absolute;
 	 left: 35%;
 	 top: 0;
@@ -2500,7 +2326,7 @@
 	 letter-spacing: .1rem;
 	 display: block;
 	 text-align: left;
-	 color: rgba(0, 0, 0, 0.5);
+	 color: #eee(0, 0, 0, 0.5);
  }
  .popup-modal .link-box {
 	 width: 100%;
@@ -2526,7 +2352,7 @@
 	 transition: all 0.3s ease-in-out;
  }
  .popup-modal .link-box a:first-child {
-	 border-right: 1px solid rgba(200, 200, 200, 0.1);
+	 border-right: 1px solid #eee(200, 200, 200, 0.1);
  }
  .popup-modal .link-box a:hover {
 	 background: #cc005f;
@@ -2762,10 +2588,10 @@
 	 text-align: center;
  }
  #stats .row {
-		 max-width: 1440px;
+	 max-width: 1440px;
  }
  #stats .stat {
-	 border-left: 1px solid rgba(255, 255, 255, 0.12);
+	 border-left: 1px solid #eee(255, 255, 255, 0.12);
 	 min-height: 17.4rem;
  }
  #stats .stat:first-child {
@@ -2784,7 +2610,7 @@
 	 color: white;
  }
  #stats .stat-title {
-	 color: rgba(255, 255, 255, 0.5);
+	 color: #eee(255, 255, 255, 0.5);
  }
  
  /**
@@ -2803,7 +2629,7 @@
  }
  @media only screen and (max-width:768px) {
 	 #stats .stat:nth-child(n) {
-		 border-left: 1px solid rgba(255, 255, 255, 0.12);
+		 border-left: 1px solid #eee(255, 255, 255, 0.12);
 	 }
 	 #stats .stat:nth-child(2n+1) {
 		 border: none;
@@ -3170,122 +2996,5 @@
  }
  
  /*# sourceMappingURL=main.css.map */
-.about-profile-pic {
-  border-radius: 50%;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 2rem auto;
-}
 
-#motherboard-svg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-#tron-grid {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-#tron-grid svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-#tron-grid svg path {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.1);
-  stroke-width: 1;
-  stroke-dasharray: 2;
-  stroke-dashoffset: 0;
-  animation: tron-grid-animation 10s linear infinite;
-}
-@keyframes tron-grid-animation {
-  from {
-	stroke-dashoffset: 0;
-  }
-  to {
-	stroke-dashoffset: -100;
-  }
-}
-
-#tron-grid svg circle {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.1);
-  stroke-width: 1;
-  stroke-dasharray: 2;
-  stroke-dashoffset: 0;
-  animation: tron-grid-animation 10s linear infinite;
-}
-#tron-grid svg circle {
-  animation-delay: 0s;
-}
-#tron-grid svg circle:nth-child(2) {
-  animation-delay: 2s;
-}
-#tron-grid svg circle:nth-child(3) {
-  animation-delay: 4s;
-}
-#tron-grid svg circle:nth-child(4) {
-  animation-delay: 6s;
-}
-#tron-grid svg circle:nth-child(5) {
-  animation-delay: 8s;
-}
-#tron-grid svg circle:nth-child(6) {
-  animation-delay: 10s;
-}
-#tron-grid svg circle:nth-child(7) {
-  animation-delay: 12s;
-}
-#tron-grid svg circle:nth-child(8) {
-  animation-delay: 14s;
-}
-
-#motherboard-svg path {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.1);
-  stroke-width: 1;
-  stroke-dasharray: 2;
-  stroke-dashoffset: 0;
-  animation: motherboard-animation 10s linear infinite;
-}
-@keyframes motherboard-animation {
-  from {
-	stroke-dashoffset: 0;
-  }
-  to {
-	stroke-dashoffset: -100;
-  }
-}
-#motherboard-svg path:nth-child(1) {
-  animation-delay: 0s;
-}
-#motherboard-svg path:nth-child(2) {
-  animation-delay: 2s;
-}
-#motherboard-svg path:nth-child(3) {
-  animation-delay: 4s;
-}
-#motherboard-svg path:nth-child(4) {
-  animation-delay: 6s;
-}
-#motherboard-svg path:nth-child(5) {
-  animation-delay: 8s;
-}
-#motherboard-svg path:nth-child(6) {
-  animation-delay: 10s;
-}
-
-#intro {
-  position: relative;
-  overflow: hidden;
-}
-
+ 
