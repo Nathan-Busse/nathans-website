@@ -2996,5 +2996,12 @@
  }
  
  /*# sourceMappingURL=main.css.map */
+.about-profile-pic {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
 
- 
