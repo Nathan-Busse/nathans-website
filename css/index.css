@@ -3022,6 +3022,109 @@
   z-index: 0;
   pointer-events: none;
 }
+
+#tron-grid {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+#tron-grid svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#tron-grid svg path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 2;
+  stroke-dashoffset: 0;
+  animation: tron-grid-animation 10s linear infinite;
+}
+@keyframes tron-grid-animation {
+  from {
+	stroke-dashoffset: 0;
+  }
+  to {
+	stroke-dashoffset: -100;
+  }
+}
+
+#tron-grid svg circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 2;
+  stroke-dashoffset: 0;
+  animation: tron-grid-animation 10s linear infinite;
+}
+#tron-grid svg circle {
+  cx: 50%;
+  cy: 50%;
+  r: 50%;
+}
+#tron-grid svg circle:nth-child(1) {
+  animation-delay: 0s;
+}
+#tron-grid svg circle:nth-child(2) {
+  animation-delay: 2s;
+}
+#tron-grid svg circle:nth-child(3) {
+  animation-delay: 4s;
+}
+#tron-grid svg circle:nth-child(4) {
+  animation-delay: 6s;
+}
+#tron-grid svg circle:nth-child(5) {
+  animation-delay: 8s;
+}
+#tron-grid svg circle:nth-child(6) {
+  animation-delay: 10s;
+}
+#tron-grid svg circle:nth-child(7) {
+  animation-delay: 12s;
+}
+#tron-grid svg circle:nth-child(8) {
+  animation-delay: 14s;
+}
+
+#motherboard-svg path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 2;
+  stroke-dashoffset: 0;
+  animation: motherboard-animation 10s linear infinite;
+}
+@keyframes motherboard-animation {
+  from {
+	stroke-dashoffset: 0;
+  }
+  to {
+	stroke-dashoffset: -100;
+  }
+}
+#motherboard-svg path:nth-child(1) {
+  animation-delay: 0s;
+}
+#motherboard-svg path:nth-child(2) {
+  animation-delay: 2s;
+}
+#motherboard-svg path:nth-child(3) {
+  animation-delay: 4s;
+}
+#motherboard-svg path:nth-child(4) {
+  animation-delay: 6s;
+}
+#motherboard-svg path:nth-child(5) {
+  animation-delay: 8s;
+}
+#motherboard-svg path:nth-child(6) {
+  animation-delay: 10s;
+}
+
 #intro {
   position: relative;
   overflow: hidden;
