@@ -172,6 +172,7 @@ Were the circuits like freeways?
 	
    <section id="intro">
 	   <div class="intro-overlay"></div>
+	   <canvas id="tron-grid-bg"></canvas>
 	   <div class="intro-content">
 		   <div class="row">
 			   <div class="col-twelve">
@@ -553,5 +554,188 @@ Were the circuits like freeways?
 
 		<!-- Production version -->
 		<script src="https://unpkg.com/lucide@latest"></script>
+		<script>
+(function() {
+  const canvas = document.getElementById('tron-grid-bg');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, dpr;
+
+  function resize() {
+    dpr = window.devicePixelRatio || 1;
+    w = canvas.offsetWidth = canvas.parentElement.offsetWidth;
+    h = canvas.offsetHeight = canvas.parentElement.offsetHeight;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  // Grid settings
+  const spacing = 60;
+  const speed = 0.5;
+  let offset = 0;
+
+  // Data packet settings
+  const packetsPerLine = 4;
+  const packetSpeed = 2.5;
+  const packetRadius = 6;
+
+  // Generate packets for each line
+  function createPackets() {
+    const packets = [];
+    // Vertical lines
+    for (let x = 0; x < w + spacing; x += spacing) {
+      for (let i = 0; i < packetsPerLine; i++) {
+        packets.push({
+          dir: 'v',
+          x: x,
+          y: Math.random() * h,
+          offset: Math.random() * h
+        });
+      }
+    }
+    // Horizontal lines
+    for (let y = 0; y < h + spacing; y += spacing) {
+      for (let i = 0; i < packetsPerLine; i++) {
+        packets.push({
+          dir: 'h',
+          y: y,
+          x: Math.random() * w,
+          offset: Math.random() * w
+        });
+      }
+    }
+    return packets;
+  }
+
+  let packets = createPackets();
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    // Animate offset for movement
+    offset += speed;
+
+    // Draw grid lines
+    ctx.save();
+    ctx.shadowColor = '#00ffe7';
+    ctx.shadowBlur = 8;
+    for (let x = -spacing; x < w + spacing; x += spacing) {
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(0,255,231,0.13)';
+      ctx.lineWidth = 2;
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+    }
+    for (let y = -spacing; y < h + spacing; y += spacing) {
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(0,255,231,0.09)';
+      ctx.lineWidth = 2;
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    // Draw glowing nodes at intersections
+    for (let x = -spacing; x < w + spacing; x += spacing) {
+      for (let y = -spacing; y < h + spacing; y += spacing) {
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(0,255,231,0.5)';
+        ctx.shadowColor = '#00ffe7';
+        ctx.shadowBlur = 10;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    // Animate and draw data packets
+    for (let packet of packets) {
+      ctx.save();
+      ctx.shadowColor = '#00ffe7';
+      ctx.shadowBlur = 18;
+      ctx.beginPath();
+      if (packet.dir === 'v') {
+        packet.y += packetSpeed;
+        if (packet.y > h) packet.y = 0;
+        ctx.arc(packet.x, packet.y, packetRadius, 0, 2 * Math.PI);
+      } else {
+        packet.x += packetSpeed;
+        if (packet.x > w) packet.x = 0;
+        ctx.arc(packet.x, packet.y, packetRadius, 0, 2 * Math.PI);
+      }
+      ctx.fillStyle = 'rgba(0,255,231,0.85)';
+      ctx.fill();
+      ctx.restore();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  // Regenerate packets on resize
+  window.addEventListener('resize', () => {
+    packets = createPackets();
+  });
+
+  draw();
+})();
+</script>
+<script>
+// filepath: /home/nathan/Desktop/workspace/full-stack-innovator/workflow/portfolio/nathan-busse.github.io/index.html
+function animateDataOnTrace(pathId, color, speed, radius) {
+  const path = document.getElementById(pathId);
+  if (!path) return;
+  const length = path.getTotalLength();
+  let t = 0;
+
+  function draw() {
+    t = (t + speed) % length;
+    const pos = path.getPointAtLength(t);
+
+    // Remove previous dot if any
+    let dot = document.getElementById(pathId + '-dot');
+    if (!dot) {
+      dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute('id', pathId + '-dot');
+      path.parentNode.appendChild(dot);
+    }
+    dot.setAttribute('cx', pos.x);
+    dot.setAttribute('cy', pos.y);
+    dot.setAttribute('r', radius);
+    dot.setAttribute('fill', color);
+    dot.setAttribute('filter', 'url(#glow)');
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// Add a glow filter to the SVG
+const svg = document.getElementById('/./Assets/images/motherboard.svg');
+if (svg) {
+  const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+  defs.innerHTML = `
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  `;
+  svg.insertBefore(defs, svg.firstChild);
+}
+
+// Animate data on each trace
+animateDataOnTrace('trace1', '#00ffe7', 3, 10);
+animateDataOnTrace('trace2', '#ff0077', 2, 8);
+// Add more calls for more traces
+</script>
 </body>
 </html>
