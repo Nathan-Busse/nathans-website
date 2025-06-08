@@ -65,7 +65,9 @@
 	 height: 100%;
  }
  body {
-	 background: #151515;
+	 /* background: url('motherboard.svg') no-repeat center center fixed;
+	 background-size: cover; */
+	 background: #0e0e0e; /* fallback color */
 	 font-family: "lora-regular", serif;
 	 font-size: 1.7rem;
 	 line-height: 3rem;
