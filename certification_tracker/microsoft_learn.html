@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Liberty University Hub</title>
+  <title>Microsoft Learn Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../courses/courses.css">
   <style>
@@ -11,12 +11,17 @@
     @keyframes fadeInHub { from { opacity: 0; transform: translateY(60px);} to { opacity: 1; transform: translateY(0);}}
     .hub-section { margin-bottom: 2.2rem; }
     .hub-section h2 { color: #00ffe7; margin-bottom: 0.7rem; letter-spacing: 1px; font-size: 1.45rem; text-shadow: 0 2px 12px #00ffe799; animation: fadeInSection 1.1s cubic-bezier(.77,0,.18,1) both;}
-    @keyframes fadeInSection { from { opacity: 0; transform: translateX(-40px);} to { opacity: 1; transform: translateX(0);}}
+    @keyframes fadeInSection { from { opacity: 0; transform: translateX(-40px);} to { opacity: 1; transform: translateX(0);}
+    }
+    .badge-list { display: flex; flex-wrap: wrap; gap: 1.2rem; padding: 0; margin: 0;}
+    .badge-item { background: #232526; border-radius: 12px; box-shadow: 0 2px 12px #00ffe733; display: flex; flex-direction: column; align-items: center; padding: 1rem 1.2rem; min-width: 120px; max-width: 160px; margin-bottom: 0.7rem; animation: fadeInItem 1s cubic-bezier(.77,0,.18,1) both;}
+    .badge-item img { width: 54px; height: 54px; margin-bottom: 0.5rem; filter: drop-shadow(0 0 8px #00ffe7cc);}
+    .badge-item span { color: #fff; font-size: 1.02rem; text-align: center; }
+    @keyframes fadeInItem { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);}}
     .progress-bar { background: #333; border-radius: 8px; overflow: hidden; margin-bottom: 0.5rem; box-shadow: 0 1px 8px #00ffe733;}
     .progress-bar-inner { background: linear-gradient(90deg, #00ffe7, #ff0077); height: 18px; transition: width 0.7s cubic-bezier(.77,0,.18,1); box-shadow: 0 0 16px #00ffe799;}
-    .achievement-list, .challenge-list, .project-list { list-style: none; padding: 0; margin: 0;}
-    .achievement-list li, .challenge-list li, .project-list li { margin-bottom: 0.7rem; font-size: 1.08rem; display: flex; align-items: center; gap: 0.7rem; animation: fadeInItem 1s cubic-bezier(.77,0,.18,1) both;}
-    @keyframes fadeInItem { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);}}
+    .challenge-list, .project-list { list-style: none; padding: 0; margin: 0;}
+    .challenge-list li, .project-list li { margin-bottom: 0.7rem; font-size: 1.08rem; display: flex; align-items: center; gap: 0.7rem; animation: fadeInItem 1s cubic-bezier(.77,0,.18,1) both;}
     .project-link { color: #00ffe7; text-decoration: underline; transition: color 0.2s;}
     .project-link:hover { color: #ff0077;}
     .hub-title { font-size: 2.2rem; color: #00ffe7; text-shadow: 0 2px 24px #00ffe799, 0 1px 0 #222; margin-bottom: 0.5rem; font-weight: 700; letter-spacing: 2px; animation: fadeInSection 1.1s cubic-bezier(.77,0,.18,1) both;}
@@ -24,44 +29,58 @@
     .floating-home-button { position: fixed; bottom: 24px; right: 24px; background: linear-gradient(135deg, #00ffe7 0%, #ff0077 100%); color: #18191a; border: none; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-radius: 50%; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 24px #00ffe799, 0 2px 8px #0008; z-index: 99; outline: none;}
     .floating-home-button:hover { background: linear-gradient(135deg, #ff0077 0%, #00ffe7 100%); color: #fff; transform: scale(1.13) rotate(-8deg); box-shadow: 0 8px 32px #ff007799, 0 4px 16px #000a;}
     .floating-home-button:active { transform: scale(1) rotate(0deg);}
-    @media (max-width: 600px) { .hub-container { padding: 1.2rem 0.5rem;} .hub-title { font-size: 1.3rem;}}
+    @media (max-width: 600px) { .hub-container { padding: 1.2rem 0.5rem;} .hub-title { font-size: 1.3rem;} .badge-list { gap: 0.5rem;}}
     footer { text-align: center; color: #888; font-size: 1rem; padding: 1.5rem 0 0.5rem 0; background: transparent; letter-spacing: 1px; margin-top: 2rem;}
   </style>
 </head>
 <body>
   <div class="hub-container">
-    <div class="hub-title">Liberty University: Interactive Hub</div>
+    <div class="hub-title">Microsoft Learn: Interactive Hub</div>
     <div class="hub-desc">
-      Welcome to your Liberty University certification hub! Track your academic progress, view achievements, tackle course challenges, and showcase your related projects.
+      Welcome to your Microsoft Learn hub! Track your digital badge achievements, tackle course challenges, and showcase your related projects.
     </div>
     <div class="hub-section">
       <h2>Overview</h2>
       <p>
-        Liberty University offers a wide range of online and on-campus programs in technology, business, and more. Courses emphasize practical skills, critical thinking, and ethical leadership.
+        Microsoft Learn provides hands-on, interactive training for Microsoft technologies, including Azure, Power Platform, and more. Earn digital badges as you complete learning paths and certifications.
       </p>
     </div>
     <div class="hub-section">
-      <h2>Achievements</h2>
-      <ul class="achievement-list">
-        <li>✔️ Introduction to Computer Science</li>
-        <li>✔️ Data Structures & Algorithms</li>
-        <li>⬜ Capstone Project (in progress)</li>
-      </ul>
+      <h2>Digital Badge Achievements</h2>
+      <div class="badge-list">
+        <div class="badge-item">
+          <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Azure Fundamentals Badge">
+          <span>Azure Fundamentals</span>
+        </div>
+        <div class="badge-item">
+          <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-azure-ai-fundamentals-badge.svg" alt="Azure AI Fundamentals Badge">
+          <span>Azure AI Fundamentals</span>
+        </div>
+        <div class="badge-item">
+          <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-azure-developer-associate-badge.svg" alt="Azure Developer Associate Badge">
+          <span>Azure Developer Associate</span>
+        </div>
+        <div class="badge-item">
+          <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-power-platform-fundamentals-badge.svg" alt="Power Platform Fundamentals Badge">
+          <span>Power Platform Fundamentals</span>
+        </div>
+        <!-- Add more badges as needed -->
+      </div>
     </div>
     <div class="hub-section">
       <h2>Course Challenges</h2>
       <ul class="challenge-list">
         <li>
-          Software Engineering Principles
-          <div class="progress-bar"><div class="progress-bar-inner" style="width: 75%"></div></div>
+          Azure Cloud Concepts
+          <div class="progress-bar"><div class="progress-bar-inner" style="width: 90%"></div></div>
         </li>
         <li>
-          Database Design
-          <div class="progress-bar"><div class="progress-bar-inner" style="width: 50%"></div></div>
+          AI & Machine Learning
+          <div class="progress-bar"><div class="progress-bar-inner" style="width: 60%"></div></div>
         </li>
         <li>
-          Cloud Computing
-          <div class="progress-bar"><div class="progress-bar-inner" style="width: 20%"></div></div>
+          Power Platform Automation
+          <div class="progress-bar"><div class="progress-bar-inner" style="width: 40%"></div></div>
         </li>
       </ul>
     </div>
@@ -69,10 +88,10 @@
       <h2>Progress Projects</h2>
       <ul class="project-list">
         <li>
-          <a href="https://github.com/Nathan-Busse/libertyu-student-portal" class="project-link" target="_blank" rel="noopener">Student Portal Clone</a>
+          <a href="https://github.com/Nathan-Busse/azure-iot-demo" class="project-link" target="_blank" rel="noopener">Azure IoT Demo</a>
         </li>
         <li>
-          <a href="https://github.com/Nathan-Busse/ai-research-libertyu" class="project-link" target="_blank" rel="noopener">AI Research Project</a>
+          <a href="https://github.com/Nathan-Busse/power-platform-automation" class="project-link" target="_blank" rel="noopener">Power Platform Automation</a>
         </li>
       </ul>
     </div>
