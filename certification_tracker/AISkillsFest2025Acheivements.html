@@ -3,138 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Skills Fest 2025 Acheivements</title>
-    <link rel="stylesheet" href="courses.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/v4-shims.min.css">
+    <title>AI Skills Fest 2025 Achievements</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
     body {
-      background: linear-gradient(135deg, #18191a 0%, #232526 100%);
-      min-height: 100vh;
+      background: #f3f6fd;
       font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-      color: #e3e3e3;
+      color: #1b1b1b;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      min-height: 100vh;
     }
     .navbar {
-      text-align: center;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
       padding: 2rem 0 1rem 0;
-      background: transparent;
+      box-shadow: 0 2px 8px #0001;
+      text-align: center;
     }
     .navbar h1 {
-      font-size: 2.7rem;
-      letter-spacing: 2px;
-      color: #00ffe7;
-      text-shadow: 0 2px 24px #00ffe799, 0 1px 0 #222;
-      margin: 0;
+      font-size: 2.3rem;
+      color: #2563eb;
       font-weight: 700;
-      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) 0.1s both;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px);}
-      to { opacity: 1; transform: translateY(0);}
+      margin: 0;
+      letter-spacing: 1px;
     }
     .certifications {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2.5rem;
-      padding: 2rem 1rem 5rem 1rem;
-      min-height: 70vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2vw 5rem 2vw;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .tile {
-      background: rgba(30,32,34,0.98);
-      border-radius: 22px;
-      box-shadow: 0 8px 32px #00ffe733, 0 2px 8px #0008;
-      width: 210px;
-      height: 260px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #2563eb11, 0 1.5px 4px #0001;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding: 2rem 1rem 1rem 1rem;
+      padding: 2.2rem 1.2rem 1.2rem 1.2rem;
       cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.2s;
+      border: 1px solid #e5e7eb;
       position: relative;
-      overflow: hidden;
-      transition: transform 0.35s cubic-bezier(.77,0,.18,1), box-shadow 0.35s cubic-bezier(.77,0,.18,1);
-      animation: tilePopIn 0.8s cubic-bezier(.77,0,.18,1) both;
     }
     .tile:hover {
-      transform: translateY(-18px) scale(1.07) rotateZ(-1.5deg);
-      box-shadow: 0 16px 48px #00ffe799, 0 4px 16px #000a;
-      z-index: 2;
+      box-shadow: 0 6px 24px #2563eb22, 0 2px 8px #0002;
+      transform: translateY(-6px) scale(1.03);
+      border-color: #2563eb44;
     }
     .tile img {
-      width: 70px;
-      height: 70px;
+      width: 64px;
+      height: 64px;
       object-fit: contain;
       margin-bottom: 1.2rem;
-      filter: drop-shadow(0 0 12px #00ffe7cc);
-      transition: filter 0.3s;
-    }
-    .tile:hover img {
-      filter: drop-shadow(0 0 32px #ff0077cc) brightness(1.2);
+      background: #f3f6fd;
+      border-radius: 12px;
+      box-shadow: 0 1px 4px #2563eb11;
+      transition: box-shadow 0.2s;
     }
     .tile h2 {
-      font-size: 1.25rem;
-      color: #fff;
-      margin: 0.5rem 0 0 0;
-      letter-spacing: 1px;
+      font-size: 1.18rem;
+      color: #2563eb;
       font-weight: 600;
-      text-shadow: 0 1px 8px #00ffe799;
-      transition: color 0.3s;
-    }
-    .tile::before {
-      content: '';
-      position: absolute;
-      top: -60%;
-      left: -60%;
-      width: 220%;
-      height: 220%;
-      background: conic-gradient(from 90deg, #00ffe7 0%, #ff0077 40%, #00ffe7 80%, #ff0077 100%);
-      opacity: 0.13;
-      z-index: 0;
-      transform: rotate(0deg);
-      animation: tileGlow 3.5s linear infinite;
-    }
-    @keyframes tileGlow {
-      0% { transform: rotate(0deg);}
-      100% { transform: rotate(360deg);}
-    }
-    @keyframes tilePopIn {
-      0% { opacity: 0; transform: scale(0.7) translateY(60px);}
-      100% { opacity: 1; transform: scale(1) translateY(0);}
+      margin: 0.5rem 0 0 0;
+      letter-spacing: 0.5px;
+      text-align: center;
     }
     .floating-home-button {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: linear-gradient(135deg, #00ffe7 0%, #ff0077 100%);
-      color: #18191a;
+      bottom: 28px;
+      right: 28px;
+      background: #2563eb;
+      color: #fff;
       border: none;
-      width: 52px;
-      height: 52px;
+      width: 54px;
+      height: 54px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2rem;
       border-radius: 50%;
       cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 4px 24px #00ffe799, 0 2px 8px #0008;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px #2563eb33, 0 2px 8px #0002;
       z-index: 99;
       outline: none;
     }
     .floating-home-button:hover {
-      background: linear-gradient(135deg, #ff0077 0%, #00ffe7 100%);
-      color: #fff;
-      transform: scale(1.13) rotate(-8deg);
-      box-shadow: 0 8px 32px #ff007799, 0 4px 16px #000a;
-    }
-    .floating-home-button:active {
-      transform: scale(1) rotate(0deg);
+      background: #1742a0;
+      transform: scale(1.09);
     }
     footer {
       text-align: center;
@@ -145,23 +105,34 @@
       letter-spacing: 1px;
       margin-top: 2rem;
     }
-    @media (max-width: 900px) {
-      .certifications { gap: 1.2rem; }
-      .tile { width: 170px; height: 210px; padding: 1.2rem 0.5rem 0.5rem 0.5rem;}
-      .tile img { width: 48px; height: 48px;}
-      .tile h2 { font-size: 1rem;}
-    }
-    @media (max-width: 600px) {
-      .certifications { gap: 0.7rem; }
-      .tile { width: 98vw; max-width: 340px; height: 120px; flex-direction: row; align-items: center; padding: 0.5rem 1rem;}
-      .tile img { width: 38px; height: 38px; margin-bottom: 0;}
-      .tile h2 { font-size: 0.98rem; margin-left: 1rem;}
+    @media (max-width: 700px) {
+      .certifications {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1.5rem 2vw 4rem 2vw;
+      }
+      .tile {
+        flex-direction: row;
+        align-items: center;
+        padding: 1.2rem 1rem;
+        min-height: 90px;
+      }
+      .tile img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+        margin-right: 1.2rem;
+      }
+      .tile h2 {
+        font-size: 1rem;
+        margin: 0;
+      }
     }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <h1>AI Skills Fest 2025 Acheivements</h1>
+        <h1>AI Skills Fest 2025 Achievements</h1>
     </div>
     <div class="certifications">
         <div class="tile" data-cert="Alison">
