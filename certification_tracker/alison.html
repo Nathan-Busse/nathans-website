@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nathan Busse – Mechanical Keyboard Portfolio</title>
+  <title>Alison – Basics in Touch Typing Course</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -53,7 +53,7 @@
       position: relative;
       z-index: 1;
       margin: 6vh auto;
-      max-width: 700px;
+      max-width: 900px;
       background: var(--bg1);
       border-radius: 18px;
       box-shadow:
@@ -67,7 +67,7 @@
     }
     .title {
       color: var(--text);
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       letter-spacing: 0.1em;
       margin-bottom: 0.5em;
       text-shadow: 0 2px 8px #000a;
@@ -75,15 +75,18 @@
     }
     .subtitle {
       color: var(--accent2);
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 400;
       margin-bottom: 2em;
       letter-spacing: 0.05em;
+      text-align: center;
     }
     .key-row {
       display: flex;
       gap: 0.7rem;
       margin-bottom: 1.1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .key {
       background: linear-gradient(180deg, #23232b 60%, #18181f 100%);
@@ -114,13 +117,31 @@
     .about span {
       color: var(--accent);
     }
+    .about a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .friendly-message {
+      background: #5efcff22;
+      color: var(--accent2);
+      border-radius: 8px;
+      padding: 1em 1.5em;
+      margin: 1.5em 0 1em 0;
+      font-size: 1.08rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 2px 12px #0003;
+      max-width: 500px;
+      border: 1px solid var(--accent);
+    }
     @media (max-width: 600px) {
       .keyboard-container {
         padding: 1.2rem 0.5rem 1.2rem 0.5rem;
       }
-      .title { font-size: 1.5rem; }
+      .title { font-size: 1.3rem; }
       .subtitle { font-size: 1rem; }
       .key { font-size: 0.95rem; padding: 0.5em 0.7em; }
+      .friendly-message { font-size: 0.98rem; }
     }
      .floating-home-button {
    position: fixed;
@@ -153,7 +174,11 @@
   <div class="rgb-bg"></div>
   <main class="keyboard-container">
     <div class="title">Alison</div>
-    <div class="subtitle">Basics in touch typing course</div>
+    <div class="subtitle">Basics in Touch Typing Course</div>
+    <div class="friendly-message">
+      😊 Alison is designed to be friendly and accessible for all users, including those on mobile devices.<br>
+      Enjoy learning touch typing anywhere, anytime!
+    </div>
     <div class="key-row">
       <div class="key" style="min-width:3.5em;">Esc</div>
       <div class="key" style="min-width:3.5em;">F1</div>
@@ -176,7 +201,6 @@
       <div class="key">3</div>
       <div class="key">4</div>
       <div class="key">5</div>
-
       <div class="key">6</div>
       <div class="key">7</div>
       <div class="key">8</div>
@@ -248,32 +272,14 @@
     </div>
     <div class="about">
       <p>
-        This is a basic touch typing course from <span>Alison</span> that covers the fundamentals of typing on a keyboard.
-        It includes lessons on finger placement, typing speed, and accuracy.
-      </p>
-      <p>
-        The course is designed to help you improve your typing skills and become more efficient at using a keyboard.
-      </p>
-      <p>
-        You can find more information about the course on the <a href="https://alison.com/course/basics-in-touch-typing" target="_blank" rel="noopener noreferrer">Alison website</a>.
+        <span>Basics in Touch Typing</span> is a free course from Alison covering finger placement, typing speed, and accuracy.<br>
+        Improve your keyboard skills and become a faster, more efficient typist.<br>
+        <a href="https://alison.com/course/basics-in-touch-typing" target="_blank" rel="noopener noreferrer">View the course on Alison</a>
       </p>
     </div>
     <button class="floating-home-button" onclick="window.location.href='index.html'">
       <span>&#8962;</span>
     </button>
-    <script>
-      // Floating home button functionality
-      document.querySelector('.floating-home-button').addEventListener('click', () => {
-        window.location.href = '/../courses/courses.html';
-      });
-      // Animate tiles in with a staggered effect
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.tile').forEach((tile, i) => {
-          tile.style.animationDelay = (i * 0.13) + 's';
-          tile.classList.add('fade-in');
-        });
-      });
-    </script>
   </main>
   <script>
     // Floating home button functionality
