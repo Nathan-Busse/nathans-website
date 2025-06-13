@@ -56,7 +56,7 @@
       position: relative;
       z-index: 1;
       margin: 6vh auto;
-      max-width: 950px;
+      max-width: 1000px;
       background: var(--bg1);
       border-radius: 18px;
       box-shadow:
@@ -67,6 +67,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 95vw;
+      box-sizing: border-box;
     }
     .title {
       color: var(--text);
@@ -75,6 +77,7 @@
       margin-bottom: 0.5em;
       text-shadow: 0 2px 8px #000a;
       font-weight: 700;
+      text-align: center;
     }
     .subtitle {
       color: var(--accent2);
@@ -84,21 +87,46 @@
       letter-spacing: 0.05em;
       text-align: center;
     }
+    .interact-note {
+      color: var(--accent);
+      background: #23232b;
+      border: 1px solid var(--accent2);
+      border-radius: 7px;
+      padding: 0.7em 1.2em;
+      margin-bottom: 1.5em;
+      font-size: 1.08rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 2px 12px #0003;
+      max-width: 500px;
+    }
+    .keyboard-outer-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
     .keyboard {
       background: #18181f;
       border-radius: 18px;
       box-shadow: 0 8px 32px #000a, 0 2px 0 #23232b inset;
-      padding: 2.5rem 1.2rem 2rem 1.2rem;
-      display: inline-block;
+      padding: 1.5rem 0.5rem 1.5rem 0.5rem;
       margin-bottom: 2em;
       border: 2px solid #23232b;
+      min-width: 1050px; /* Ensures all keys fit horizontally */
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
     .key-row {
       display: flex;
-      gap: 0.4rem;
-      margin-bottom: 0.4rem;
+      width: 100%;
       justify-content: flex-start;
-      position: relative;
+      margin-bottom: 0.4rem;
+      box-sizing: border-box;
     }
     .keycap {
       background: linear-gradient(180deg, var(--keycap-top) 60%, var(--keycap) 100%);
@@ -126,7 +154,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 0.4rem;
       margin-bottom: 2px;
+      flex: 0 0 auto;
+      box-sizing: border-box;
     }
     .keycap:active,
     .keycap.pressed {
@@ -140,16 +171,47 @@
       font-weight: 700;
       background: linear-gradient(180deg, #23232b 60%, #23232b 100%);
     }
-    /* Keyboard row indents for realistic stagger */
-    .key-row.row2 { margin-left: 2.7em; }
-    .key-row.row3 { margin-left: 3.7em; }
-    .key-row.row4 { margin-left: 4.7em; }
-    .key-row.row5 { margin-left: 6.5em; }
     /* Key widths for realism */
     .keycap.w1 { min-width: 3.5em; }
     .keycap.w2 { min-width: 5.5em; }
     .keycap.w3 { min-width: 7.5em; }
     .keycap.space { min-width: 20em; }
+    /* Keyboard row indents for realistic stagger */
+    .key-row.row2 { margin-left: 2.2em; }
+    .key-row.row3 { margin-left: 3.2em; }
+    .key-row.row4 { margin-left: 4.2em; }
+    .key-row.row5 { margin-left: 5.5em; }
+    @media (max-width: 1100px) {
+      .keyboard { min-width: 900px; max-width: 900px; }
+    }
+    @media (max-width: 950px) {
+      .keyboard { min-width: 800px; max-width: 800px; }
+    }
+    @media (max-width: 900px) {
+      .keyboard-container { padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
+      .keyboard { padding: 1.2rem 0.2rem 1.2rem 0.2rem; min-width: 700px; max-width: 700px; }
+      .title { font-size: 1.3rem; }
+      .subtitle { font-size: 1rem; }
+      .keycap { font-size: 0.95rem; padding: 0.5em 0.7em; }
+      .keycap.space { min-width: 10em; }
+      .interact-note { font-size: 0.98rem; }
+    }
+    @media (max-width: 700px) {
+      .keyboard { padding: 0.5rem 0.1rem 0.5rem 0.1rem; min-width: 500px; max-width: 500px; }
+      .keycap { font-size: 0.85rem; padding: 0.4em 0.4em; }
+      .keycap.space { min-width: 4em; }
+      .key-row.row2 { margin-left: 1em; }
+      .key-row.row3 { margin-left: 1.5em; }
+      .key-row.row4 { margin-left: 2em; }
+      .key-row.row5 { margin-left: 2.5em; }
+    }
+    @media (max-width: 500px) {
+      .keyboard-container { padding: 0.5rem 0.1rem 0.5rem 0.1rem; }
+      .keyboard { padding: 0.2rem 0.05rem 0.2rem 0.05rem; min-width: 320px; max-width: 320px; }
+      .keycap { font-size: 0.7rem; padding: 0.25em 0.2em; }
+      .keycap.space { min-width: 2.5em; }
+      .key-row.row2, .key-row.row3, .key-row.row4, .key-row.row5 { margin-left: 0.2em; }
+    }
     .about {
       color: var(--text-sub);
       font-size: 1.1rem;
@@ -163,23 +225,6 @@
     .about a {
       color: var(--accent);
       text-decoration: underline;
-    }
-    @media (max-width: 1200px) {
-      .keyboard-container { padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
-      .keyboard { padding: 1.2rem 0.2rem 1.2rem 0.2rem; }
-      .title { font-size: 1.3rem; }
-      .subtitle { font-size: 1rem; }
-      .keycap { font-size: 0.95rem; padding: 0.5em 0.7em; }
-      .keycap.space { min-width: 10em; }
-    }
-    @media (max-width: 700px) {
-      .keyboard { padding: 0.5rem 0.1rem 0.5rem 0.1rem; }
-      .keycap { font-size: 0.85rem; padding: 0.4em 0.4em; }
-      .keycap.space { min-width: 4em; }
-      .key-row.row2 { margin-left: 1.2em; }
-      .key-row.row3 { margin-left: 2em; }
-      .key-row.row4 { margin-left: 2.7em; }
-      .key-row.row5 { margin-left: 3.5em; }
     }
     .floating-home-button {
       position: fixed;
@@ -213,98 +258,105 @@
   <main class="keyboard-container">
     <div class="title">Alison</div>
     <div class="subtitle">Basics in touch typing course</div>
-    <div class="keyboard">
-      <!-- Row 1: Function keys -->
-      <div class="key-row">
-        <div class="keycap w1 special">Esc</div>
-        <div class="keycap special">F1</div>
-        <div class="keycap special">F2</div>
-        <div class="keycap special">F3</div>
-        <div class="keycap special">F4</div>
-        <div class="keycap special">F5</div>
-        <div class="keycap special">F6</div>
-        <div class="keycap special">F7</div>
-        <div class="keycap special">F8</div>
-        <div class="keycap special">F9</div>
-        <div class="keycap special">F10</div>
-        <div class="keycap special">F11</div>
-        <div class="keycap special">F12</div>
-      </div>
-      <!-- Row 2: Number row -->
-      <div class="key-row row2">
-        <div class="keycap w1 special">~</div>
-        <div class="keycap">1</div>
-        <div class="keycap">2</div>
-        <div class="keycap">3</div>
-        <div class="keycap">4</div>
-        <div class="keycap">5</div>
-        <div class="keycap">6</div>
-        <div class="keycap">7</div>
-        <div class="keycap">8</div>
-        <div class="keycap">9</div>
-        <div class="keycap">0</div>
-        <div class="keycap">-</div>
-        <div class="keycap">=</div>
-        <div class="keycap w2 special">Backspace</div>
-      </div>
-      <!-- Row 3: QWERTY row -->
-      <div class="key-row row3">
-        <div class="keycap w1 special">Tab</div>
-        <div class="keycap">Q</div>
-        <div class="keycap">W</div>
-        <div class="keycap">E</div>
-        <div class="keycap">R</div>
-        <div class="keycap">T</div>
-        <div class="keycap">Y</div>
-        <div class="keycap">U</div>
-        <div class="keycap">I</div>
-        <div class="keycap">O</div>
-        <div class="keycap">P</div>
-        <div class="keycap">[</div>
-        <div class="keycap">]</div>
-        <div class="keycap w2 special">\</div>
-      </div>
-      <!-- Row 4: Home row -->
-      <div class="key-row row4">
-        <div class="keycap w2 special">Caps</div>
-        <div class="keycap">A</div>
-        <div class="keycap">S</div>
-        <div class="keycap">D</div>
-        <div class="keycap">F</div>
-        <div class="keycap">G</div>
-        <div class="keycap">H</div>
-        <div class="keycap">J</div>
-        <div class="keycap">K</div>
-        <div class="keycap">L</div>
-        <div class="keycap">;</div>
-        <div class="keycap">'</div>
-        <div class="keycap w2 special">Enter</div>
-      </div>
-      <!-- Row 5: Bottom row -->
-      <div class="key-row row5">
-        <div class="keycap w2 special">Shift</div>
-        <div class="keycap">Z</div>
-        <div class="keycap">X</div>
-        <div class="keycap">C</div>
-        <div class="keycap">V</div>
-        <div class="keycap">B</div>
-        <div class="keycap">N</div>
-        <div class="keycap">M</div>
-        <div class="keycap">,</div>
-        <div class="keycap">.</div>
-        <div class="keycap">/</div>
-        <div class="keycap w3 special">Shift</div>
-      </div>
-      <!-- Row 6: Space row -->
-      <div class="key-row row6">
-        <div class="keycap w1 special">Ctrl</div>
-        <div class="keycap w1 special">Win</div>
-        <div class="keycap w1 special">Alt</div>
-        <div class="keycap space special">Space</div>
-        <div class="keycap w1 special">Alt</div>
-        <div class="keycap w1 special">Fn</div>
-        <div class="keycap w1 special">Menu</div>
-        <div class="keycap w1 special">Ctrl</div>
+    <div class="interact-note">
+      The keyboard below is interactable – click or tap any key to see it animate!<br>
+      The layout is responsive and works on both desktop and mobile screens.<br>
+      <span style="color:#b3b3ff">If you do not see the full keyboard, swipe left/right on mobile or scroll horizontally.</span>
+    </div>
+    <div class="keyboard-outer-scroll">
+      <div class="keyboard">
+        <!-- Row 1: Function keys -->
+        <div class="key-row">
+          <div class="keycap w1 special">Esc</div>
+          <div class="keycap special">F1</div>
+          <div class="keycap special">F2</div>
+          <div class="keycap special">F3</div>
+          <div class="keycap special">F4</div>
+          <div class="keycap special">F5</div>
+          <div class="keycap special">F6</div>
+          <div class="keycap special">F7</div>
+          <div class="keycap special">F8</div>
+          <div class="keycap special">F9</div>
+          <div class="keycap special">F10</div>
+          <div class="keycap special">F11</div>
+          <div class="keycap special">F12</div>
+        </div>
+        <!-- Row 2: Number row -->
+        <div class="key-row row2">
+          <div class="keycap w1 special">~</div>
+          <div class="keycap">1</div>
+          <div class="keycap">2</div>
+          <div class="keycap">3</div>
+          <div class="keycap">4</div>
+          <div class="keycap">5</div>
+          <div class="keycap">6</div>
+          <div class="keycap">7</div>
+          <div class="keycap">8</div>
+          <div class="keycap">9</div>
+          <div class="keycap">0</div>
+          <div class="keycap">-</div>
+          <div class="keycap">=</div>
+          <div class="keycap w2 special">Backspace</div>
+        </div>
+        <!-- Row 3: QWERTY row -->
+        <div class="key-row row3">
+          <div class="keycap w1 special">Tab</div>
+          <div class="keycap">Q</div>
+          <div class="keycap">W</div>
+          <div class="keycap">E</div>
+          <div class="keycap">R</div>
+          <div class="keycap">T</div>
+          <div class="keycap">Y</div>
+          <div class="keycap">U</div>
+          <div class="keycap">I</div>
+          <div class="keycap">O</div>
+          <div class="keycap">P</div>
+          <div class="keycap">[</div>
+          <div class="keycap">]</div>
+          <div class="keycap w2 special">\</div>
+        </div>
+        <!-- Row 4: Home row -->
+        <div class="key-row row4">
+          <div class="keycap w2 special">Caps</div>
+          <div class="keycap">A</div>
+          <div class="keycap">S</div>
+          <div class="keycap">D</div>
+          <div class="keycap">F</div>
+          <div class="keycap">G</div>
+          <div class="keycap">H</div>
+          <div class="keycap">J</div>
+          <div class="keycap">K</div>
+          <div class="keycap">L</div>
+          <div class="keycap">;</div>
+          <div class="keycap">'</div>
+          <div class="keycap w2 special">Enter</div>
+        </div>
+        <!-- Row 5: Bottom row -->
+        <div class="key-row row5">
+          <div class="keycap w2 special">Shift</div>
+          <div class="keycap">Z</div>
+          <div class="keycap">X</div>
+          <div class="keycap">C</div>
+          <div class="keycap">V</div>
+          <div class="keycap">B</div>
+          <div class="keycap">N</div>
+          <div class="keycap">M</div>
+          <div class="keycap">,</div>
+          <div class="keycap">.</div>
+          <div class="keycap">/</div>
+          <div class="keycap w3 special">Shift</div>
+        </div>
+        <!-- Row 6: Space row -->
+        <div class="key-row" style="justify-content:center;">
+          <div class="keycap w1 special">Ctrl</div>
+          <div class="keycap w1 special">Win</div>
+          <div class="keycap w1 special">Alt</div>
+          <div class="keycap space special">Space</div>
+          <div class="keycap w1 special">Alt</div>
+          <div class="keycap w1 special">Fn</div>
+          <div class="keycap w1 special">Menu</div>
+          <div class="keycap w1 special">Ctrl</div>
+        </div>
       </div>
     </div>
     <div class="about">
