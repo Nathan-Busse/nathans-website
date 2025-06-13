@@ -13,6 +13,11 @@
       --accent2: #b3b3ff;
       --text: #e0e0ff;
       --text-sub: #bdbde6;
+      --keycap: #23232b;
+      --keycap-top: #2e2e38;
+      --keycap-shadow: #11161e;
+      --keycap-pressed: #1a1a22;
+      --keycap-border: #3a3a48;
     }
     html, body {
       height: 100%;
@@ -27,7 +32,6 @@
       position: relative;
       z-index: 1;
     }
-    /* RGB animated background */
     .rgb-bg {
       position: fixed;
       inset: 0;
@@ -48,12 +52,11 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    /* Keyboard container */
     .keyboard-container {
       position: relative;
       z-index: 1;
       margin: 6vh auto;
-      max-width: 900px;
+      max-width: 950px;
       background: var(--bg1);
       border-radius: 18px;
       box-shadow:
@@ -81,32 +84,72 @@
       letter-spacing: 0.05em;
       text-align: center;
     }
+    .keyboard {
+      background: #18181f;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #000a, 0 2px 0 #23232b inset;
+      padding: 2.5rem 1.2rem 2rem 1.2rem;
+      display: inline-block;
+      margin-bottom: 2em;
+      border: 2px solid #23232b;
+    }
     .key-row {
       display: flex;
-      gap: 0.7rem;
-      margin-bottom: 1.1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+      justify-content: flex-start;
+      position: relative;
     }
-    .key {
-      background: linear-gradient(180deg, #23232b 60%, #18181f 100%);
+    .keycap {
+      background: linear-gradient(180deg, var(--keycap-top) 60%, var(--keycap) 100%);
       border-radius: 7px;
-      box-shadow: 0 2px 0 #0008, 0 0.5px 0 #444 inset;
-      border: 1.5px solid #2e2e38;
+      box-shadow:
+        0 2px 0 var(--keycap-shadow),
+        0 0.5px 0 #444 inset,
+        0 6px 16px #0006;
+      border: 2px solid var(--keycap-border);
       color: var(--text);
       font-size: 1.1rem;
+      font-weight: 600;
       padding: 0.7em 1.2em;
       min-width: 3em;
       text-align: center;
       user-select: none;
-      transition: box-shadow 0.2s, color 0.2s, border-color 0.2s;
       cursor: pointer;
+      position: relative;
+      transition: 
+        box-shadow 0.12s cubic-bezier(.4,2,.6,1),
+        background 0.12s,
+        transform 0.12s cubic-bezier(.4,2,.6,1),
+        color 0.12s;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2px;
     }
-    .key:hover {
-      box-shadow: 0 4px 16px #5efcff44, 0 2px 0 #000a;
-      border-color: var(--accent);
+    .keycap:active,
+    .keycap.pressed {
+      background: linear-gradient(180deg, var(--keycap-pressed) 80%, var(--keycap) 100%);
+      box-shadow: 0 1px 0 #000a, 0 0.5px 0 #444 inset;
       color: var(--accent);
+      transform: translateY(2px) scale(0.97);
     }
+    .keycap.special {
+      color: var(--accent2);
+      font-weight: 700;
+      background: linear-gradient(180deg, #23232b 60%, #23232b 100%);
+    }
+    /* Keyboard row indents for realistic stagger */
+    .key-row.row2 { margin-left: 2.7em; }
+    .key-row.row3 { margin-left: 3.7em; }
+    .key-row.row4 { margin-left: 4.7em; }
+    .key-row.row5 { margin-left: 6.5em; }
+    /* Key widths for realism */
+    .keycap.w1 { min-width: 3.5em; }
+    .keycap.w2 { min-width: 5.5em; }
+    .keycap.w3 { min-width: 7.5em; }
+    .keycap.space { min-width: 20em; }
     .about {
       color: var(--text-sub);
       font-size: 1.1rem;
@@ -121,160 +164,159 @@
       color: var(--accent);
       text-decoration: underline;
     }
-    .friendly-message {
-      background: #5efcff22;
-      color: var(--accent2);
-      border-radius: 8px;
-      padding: 1em 1.5em;
-      margin: 1.5em 0 1em 0;
-      font-size: 1.08rem;
-      font-weight: 600;
-      text-align: center;
-      box-shadow: 0 2px 12px #0003;
-      max-width: 500px;
-      border: 1px solid var(--accent);
-    }
-    @media (max-width: 600px) {
-      .keyboard-container {
-        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-      }
+    @media (max-width: 1200px) {
+      .keyboard-container { padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
+      .keyboard { padding: 1.2rem 0.2rem 1.2rem 0.2rem; }
       .title { font-size: 1.3rem; }
       .subtitle { font-size: 1rem; }
-      .key { font-size: 0.95rem; padding: 0.5em 0.7em; }
-      .friendly-message { font-size: 0.98rem; }
+      .keycap { font-size: 0.95rem; padding: 0.5em 0.7em; }
+      .keycap.space { min-width: 10em; }
     }
-     .floating-home-button {
-   position: fixed;
-   bottom: 28px;
-   right: 28px;
-   background: #5ea0ef;
-   color: #181c24;
-   border: none;
-   width: 54px;
-   height: 54px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 2rem;
-   border-radius: 50%;
-   cursor: pointer;
-   transition: background 0.2s, transform 0.2s;
-   box-shadow: 0 4px 16px #5ea0ef55, 0 2px 0 #000a;
-   z-index: 99;
-   outline: none;
- }
- .floating-home-button:hover {
-   background: #2563eb;
-   color: #fff;
-   transform: scale(1.09);
- }
+    @media (max-width: 700px) {
+      .keyboard { padding: 0.5rem 0.1rem 0.5rem 0.1rem; }
+      .keycap { font-size: 0.85rem; padding: 0.4em 0.4em; }
+      .keycap.space { min-width: 4em; }
+      .key-row.row2 { margin-left: 1.2em; }
+      .key-row.row3 { margin-left: 2em; }
+      .key-row.row4 { margin-left: 2.7em; }
+      .key-row.row5 { margin-left: 3.5em; }
+    }
+    .floating-home-button {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #5ea0ef;
+      color: #181c24;
+      border: none;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px #5ea0ef55, 0 2px 0 #000a;
+      z-index: 99;
+      outline: none;
+    }
+    .floating-home-button:hover {
+      background: #2563eb;
+      color: #fff;
+      transform: scale(1.09);
+    }
   </style>
 </head>
 <body>
   <div class="rgb-bg"></div>
   <main class="keyboard-container">
     <div class="title">Alison</div>
-    <div class="subtitle">Basics in Touch Typing Course</div>
-    <div class="friendly-message">
-      😊 Alison is designed to be friendly and accessible for all users, including those on mobile devices.<br>
-      Enjoy learning touch typing anywhere, anytime!
-    </div>
-    <div class="key-row">
-      <div class="key" style="min-width:3.5em;">Esc</div>
-      <div class="key" style="min-width:3.5em;">F1</div>
-      <div class="key">F2</div>
-      <div class="key">F3</div>
-      <div class="key">F4</div>
-      <div class="key">F5</div>
-      <div class="key">F6</div>
-      <div class="key">F7</div>
-      <div class="key">F8</div>
-      <div class="key">F9</div>
-      <div class="key">F10</div>
-      <div class="key">F11</div>
-      <div class="key">F12</div>
-    </div>
-    <div class="key-row">
-      <div class="key" style="min-width:3.5em;">~</div>
-      <div class="key" style="min-width:3.5em;">1</div>
-      <div class="key">2</div>
-      <div class="key">3</div>
-      <div class="key">4</div>
-      <div class="key">5</div>
-      <div class="key">6</div>
-      <div class="key">7</div>
-      <div class="key">8</div>
-      <div class="key">9</div>
-      <div class="key">0</div>
-      <div class="key">-</div>
-      <div class="key">=</div>
-      <div class="key" style="min-width:3.5em;">Backspace</div>
-    </div>
-    <div class="key-row">
-      <div class="key" style="min-width:3.5em;">Tab</div>
-      <div class="key">Q</div>
-      <div class="key">W</div>
-      <div class="key">E</div>
-      <div class="key">R</div>
-      <div class="key">T</div>
-      <div class="key">Y</div>
-      <div class="key">U</div>
-      <div class="key">I</div>
-      <div class="key">O</div>
-      <div class="key">P</div>
-      <div class="key">[</div>
-      <div class="key">]</div>
-      <div class="key" style="min-width:3.5em;">Enter</div>
-    </div>
-    <div class="key-row">
-      <div class="key" style="min-width:3.5em;">Ctrl</div>
-      <div class="key">A</div>
-      <div class="key">S</div>
-      <div class="key">D</div>
-      <div class="key">F</div>
-      <div class="key">G</div>
-      <div class="key">H</div>
-      <div class="key">J</div>
-      <div class="key">K</div>
-      <div class="key">L</div>
-      <div class="key">;</div>
-      <div class="key">'</div>
-      <div class="key" style="min-width:3.5em;">Shift</div>
-      <div class="key" style="min-width:3.5em;">Up</div>
-    </div>
-    <div class="key-row">
-      <div class="key" style="min-width:3.5em;">Fn</div>
-      <div class="key">Z</div>
-      <div class="key">X</div>
-      <div class="key">C</div>
-      <div class="key">V</div>
-      <div class="key">B</div>
-      <div class="key">N</div>
-      <div class="key">M</div>
-      <div class="key">,</div>
-      <div class="key">.</div>
-      <div class="key">/</div>
-      <div class="key" style="min-width:3.5em;">Shift</div>
-      <div class="key" style="min-width:3.5em;">Down</div>
-      <div class="key" style="min-width:3.5em;">Ctrl</div>
-      <div class="key" style="min-width:3.5em;">Alt</div>
-      <div class="key" style="min-width:3.5em;">Space</div>
-    </div>
-    <div class="key-row">
-      <div class="key" style="min-width:3.5em;">Left</div>
-      <div class="key" style="min-width:3.5em;">Right</div>
-      <div class="key" style="min-width:3.5em;">Up</div>
-      <div class="key" style="min-width:3.5em;">Down</div>
-      <div class="key" style="min-width:3.5em;">Home</div>
-      <div class="key" style="min-width:3.5em;">End</div>
-      <div class="key" style="min-width:3.5em;">Page Up</div>
-      <div class="key" style="min-width:3.5em;">Page Down</div>
+    <div class="subtitle">Basics in touch typing course</div>
+    <div class="keyboard">
+      <!-- Row 1: Function keys -->
+      <div class="key-row">
+        <div class="keycap w1 special">Esc</div>
+        <div class="keycap special">F1</div>
+        <div class="keycap special">F2</div>
+        <div class="keycap special">F3</div>
+        <div class="keycap special">F4</div>
+        <div class="keycap special">F5</div>
+        <div class="keycap special">F6</div>
+        <div class="keycap special">F7</div>
+        <div class="keycap special">F8</div>
+        <div class="keycap special">F9</div>
+        <div class="keycap special">F10</div>
+        <div class="keycap special">F11</div>
+        <div class="keycap special">F12</div>
+      </div>
+      <!-- Row 2: Number row -->
+      <div class="key-row row2">
+        <div class="keycap w1 special">~</div>
+        <div class="keycap">1</div>
+        <div class="keycap">2</div>
+        <div class="keycap">3</div>
+        <div class="keycap">4</div>
+        <div class="keycap">5</div>
+        <div class="keycap">6</div>
+        <div class="keycap">7</div>
+        <div class="keycap">8</div>
+        <div class="keycap">9</div>
+        <div class="keycap">0</div>
+        <div class="keycap">-</div>
+        <div class="keycap">=</div>
+        <div class="keycap w2 special">Backspace</div>
+      </div>
+      <!-- Row 3: QWERTY row -->
+      <div class="key-row row3">
+        <div class="keycap w1 special">Tab</div>
+        <div class="keycap">Q</div>
+        <div class="keycap">W</div>
+        <div class="keycap">E</div>
+        <div class="keycap">R</div>
+        <div class="keycap">T</div>
+        <div class="keycap">Y</div>
+        <div class="keycap">U</div>
+        <div class="keycap">I</div>
+        <div class="keycap">O</div>
+        <div class="keycap">P</div>
+        <div class="keycap">[</div>
+        <div class="keycap">]</div>
+        <div class="keycap w2 special">\</div>
+      </div>
+      <!-- Row 4: Home row -->
+      <div class="key-row row4">
+        <div class="keycap w2 special">Caps</div>
+        <div class="keycap">A</div>
+        <div class="keycap">S</div>
+        <div class="keycap">D</div>
+        <div class="keycap">F</div>
+        <div class="keycap">G</div>
+        <div class="keycap">H</div>
+        <div class="keycap">J</div>
+        <div class="keycap">K</div>
+        <div class="keycap">L</div>
+        <div class="keycap">;</div>
+        <div class="keycap">'</div>
+        <div class="keycap w2 special">Enter</div>
+      </div>
+      <!-- Row 5: Bottom row -->
+      <div class="key-row row5">
+        <div class="keycap w2 special">Shift</div>
+        <div class="keycap">Z</div>
+        <div class="keycap">X</div>
+        <div class="keycap">C</div>
+        <div class="keycap">V</div>
+        <div class="keycap">B</div>
+        <div class="keycap">N</div>
+        <div class="keycap">M</div>
+        <div class="keycap">,</div>
+        <div class="keycap">.</div>
+        <div class="keycap">/</div>
+        <div class="keycap w3 special">Shift</div>
+      </div>
+      <!-- Row 6: Space row -->
+      <div class="key-row row6">
+        <div class="keycap w1 special">Ctrl</div>
+        <div class="keycap w1 special">Win</div>
+        <div class="keycap w1 special">Alt</div>
+        <div class="keycap space special">Space</div>
+        <div class="keycap w1 special">Alt</div>
+        <div class="keycap w1 special">Fn</div>
+        <div class="keycap w1 special">Menu</div>
+        <div class="keycap w1 special">Ctrl</div>
+      </div>
     </div>
     <div class="about">
       <p>
-        <span>Basics in Touch Typing</span> is a free course from Alison covering finger placement, typing speed, and accuracy.<br>
-        Improve your keyboard skills and become a faster, more efficient typist.<br>
-        <a href="https://alison.com/course/basics-in-touch-typing" target="_blank" rel="noopener noreferrer">View the course on Alison</a>
+        This is a basic touch typing course from <span>Alison</span> that covers the fundamentals of typing on a keyboard.
+        It includes lessons on finger placement, typing speed, and accuracy.
+      </p>
+      <p>
+        The course is designed to help you improve your typing skills and become more efficient at using a keyboard.
+      </p>
+      <p>
+        You can find more information about the course on the <a href="https://alison.com/course/basics-in-touch-typing" target="_blank" rel="noopener noreferrer">Alison website</a>.
       </p>
     </div>
     <button class="floating-home-button" onclick="window.location.href='index.html'">
@@ -282,17 +324,27 @@
     </button>
   </main>
   <script>
-    // Floating home button functionality
-    document.querySelector('.floating-home-button').addEventListener('click', () => {
-      window.location.href = '/../courses/courses.html';
-    });
-    // Animate tiles in with a staggered effect
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.tile').forEach((tile, i) => {
-        tile.style.animationDelay = (i * 0.13) + 's';
-        tile.classList.add('fade-in');
+    // Animate keycap press on click/tap
+    document.querySelectorAll('.keycap').forEach(key => {
+      key.addEventListener('mousedown', function() {
+        key.classList.add('pressed');
+      });
+      key.addEventListener('touchstart', function() {
+        key.classList.add('pressed');
+      });
+      key.addEventListener('mouseup', function() {
+        key.classList.remove('pressed');
+      });
+      key.addEventListener('mouseleave', function() {
+        key.classList.remove('pressed');
+      });
+      key.addEventListener('touchend', function() {
+        key.classList.remove('pressed');
+      });
+      key.addEventListener('touchcancel', function() {
+        key.classList.remove('pressed');
       });
     });
   </script>
-  </body>
+</body>
 </html>
