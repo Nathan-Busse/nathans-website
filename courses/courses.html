@@ -244,15 +244,15 @@
     </script>
     <!-- Add this script just before the closing </body> tag -->
     <script>
-      // Redirect logic for local vs GitHub Pages
+      // Only allow local access to this page, otherwise redirect to 503.html
       (function() {
         const host = window.location.host;
-        // Local dev (e.g. Live Server)
+        // Allow only on local dev server
         if (host === "127.0.0.1:5500" || host === "localhost:5500") {
 
-          // Do nothing, stay on this page (certification_tracker HTML)
+          // Do nothing, allow normal operation
         } else if (host === "nathan-busse.github.io") {
-          // Redirect to 503.html under /page_under_construction/
+          // On GitHub Pages, redirect to 503.html under /page_under_construction/
           window.location.href = "/page_under_construction/503.html";
         }
       })();

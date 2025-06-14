@@ -277,5 +277,17 @@
       window.location.href = "/index.html"; // Adjust the path as needed
     }
   </script>
+
+  <script>
+    // Only allow 503.html on GitHub Pages, otherwise redirect to courses
+    (function() {
+      const host = window.location.host;
+      if (host === "127.0.0.1:5500" || host === "localhost:5500") {
+        // On local, redirect to courses page
+        window.location.href = "/courses/courses.html";
+      }
+      // On GitHub Pages, do nothing (show 503)
+    })();
+  </script>
 </body>
 </html>
