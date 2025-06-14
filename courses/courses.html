@@ -183,7 +183,7 @@
             <img src="PageAssets/icons/Alison-icon.png" alt="Alison">
             <h2>Alison</h2>
         </div>
-        <div class="tile" data-cert="LibertyU" tabindex="0">
+        <div class="tile" data-cert="503" tabindex="0">
             <img src="PageAssets/icons/LibertyU-icon.png" alt="LibertyU">
             <h2>LibertyU</h2>
         </div>
@@ -191,19 +191,19 @@
             <img src="PageAssets/icons/ms-icon.jpg" alt="Microsoft Learn">
             <h2>Microsoft Learn</h2>
         </div>
-        <div class="tile" data-cert="AWS Skills Builder" tabindex="0">
+        <div class="tile" data-cert="503" tabindex="0">
             <img src="PageAssets/icons/aws-icon.jpeg" alt="AWS Skills Builder">
             <h2>AWS Skills Builder</h2>
         </div>
-        <div class="tile" data-cert="cppinstitute" tabindex="0">
+        <div class="tile" data-cert="503" tabindex="0">
             <img src="PageAssets/icons/cppinstitute-icon.png" alt="C++ institute">
             <h2>C++ institute</h2>
         </div>
-        <div class="tile" data-cert="Unity Learn" tabindex="0">
+        <div class="tile" data-cert="503" tabindex="0">
             <img src="PageAssets/icons/unity-icon.png" alt="Unity Learn">
             <h2>Unity Learn</h2>
         </div>
-        <div class="tile" data-cert="Autodesk Learning" tabindex="0">
+        <div class="tile" data-cert="503" tabindex="0">
             <img src="PageAssets/icons/autodesk-icon.png" alt="Autodesk Learning">
             <h2>Autodesk Learning</h2>
         </div>
@@ -222,7 +222,7 @@
       document.querySelectorAll('.tile').forEach(tile => {
         tile.addEventListener('click', () => {
           const certName = tile.getAttribute('data-cert');
-          window.location.href = `https://nathan-busse.github.io/certification_tracker/${certName.toLowerCase().replace(/\s+/g, '_')}.html`;
+          window.location.href = `/page_under_construction/${certName.toLowerCase().replace(/\s+/g, '_')}.html`;
         });
         tile.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
