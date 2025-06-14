@@ -233,7 +233,7 @@
   <!-- JavaScript to update the countdown -->
   <script>
     // Set target date (adjust this as needed)
-    const countDownDate = new Date("June 13, 2025 23:59:59").getTime();
+    const countDownDate = new Date("June 14, 2025 23:59:59").getTime();
 
     // Update countdown every second
     const countdownFunction = setInterval(() => {
@@ -261,14 +261,10 @@
         }, 500);
       });
 
-      // If the countdown is complete, clear the interval and redirect to courses
+      // If the countdown is complete, clear the interval and show a message
       if (distance < 0) {
         clearInterval(countdownFunction);
-        document.querySelector(".countdown-container").innerHTML = "<h2>Redirecting...</h2>";
-        // Redirect to the courses folder (courses.html)
-        setTimeout(function() {
-          window.location.href = "/./courses/courses.html";
-        }, 1200); // 1.2 seconds for user to see the message
+        document.querySelector(".countdown-container").innerHTML = "<h2>Time's up!</h2>";
       }
     }, 1000);
   </script>
