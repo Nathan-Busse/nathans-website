@@ -674,5 +674,44 @@ document.querySelectorAll('.intro-social a[data-url]').forEach(btn => {
     ← Back to Intro
   </button>
 </div>
+<script>
+  // Set target date (adjust as needed)
+  const countDownDate = new Date("June 14, 2025 23:59:59").getTime();
+
+  const countdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    // Calculate time components
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the results
+    document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+    document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+    document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+
+    // Animate
+    const boxes = document.querySelectorAll('.countdown-box span');
+    boxes.forEach(box => {
+      box.classList.add('animate');
+      setTimeout(() => {
+        box.classList.remove('animate');
+      }, 500);
+    });
+
+    // When timer is done, redirect to courses/courses.html
+    if (distance < 0) {
+      clearInterval(countdownFunction);
+      document.querySelector(".countdown-container").innerHTML = "<h2>Redirecting...</h2>";
+      setTimeout(function() {
+        window.location.href = "/courses/courses.html";
+      }, 1200);
+    }
+  }, 1000);
+</script>
 </body>
 </html>
