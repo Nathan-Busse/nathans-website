@@ -1,9 +1,9 @@
 // Set target date (adjust this as needed)
-export const countDownDate = new Date("June 14, 2025 15:59:59").getTime();
+export const myModule  = new Date("June 14, 2025 15:59:59").getTime();
 // Update countdown every second
-const countdownFunction = setInterval(() => {
+const myModuleFunction = setInterval(() => {
   const now = new Date().getTime();
-  const distance = countDownDate - now;
+  const distance = myModule - now;
   
   // Calculate time components
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));

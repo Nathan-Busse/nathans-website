@@ -243,8 +243,7 @@
       });
     </script>
     <!-- Add this script just before the closing </body> tag -->
-     
-    <script type="module" src="../page_under_construction/503.html">
+    <script>
       /* Only allow local access to this page, otherwise redirect to 503.html
           however nly allow public access to this page if countdown in 503.html has lapsed, otherwise redirect to 503.html
           This is to prevent users from accessing this page before the countdown has ended */
@@ -256,19 +255,19 @@
         } else {
           // On public, check if countdown has lapsed
           async function main() {
-            const myModule = await import("./js/503.js");
-            // use myModule
-}
+            const myModule = await import("./page_under_construction/503.js");
+          }
+
 main();
-          // If the countdown has not lapsed, redirect to 503.html
-          // Otherwise, allow access to this page
-          // Get the current time
+
+          const countDownDate = new Date("June 14, 2025 23:59:59").getTime();
           const now = new Date().getTime();
           if (now < countDownDate) {
             window.location.href = "/page_under_construction/503.html";
           }
         }
       })();
+    
     </script>
-  </body>
+</body>
 </html>
