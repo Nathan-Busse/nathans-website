@@ -261,10 +261,14 @@
         }, 500);
       });
 
-      // If the countdown is complete, clear the interval and show a message
+      // If the countdown is complete, clear the interval and redirect to courses
       if (distance < 0) {
         clearInterval(countdownFunction);
-        document.querySelector(".countdown-container").innerHTML = "<h2>Time's up!</h2>";
+        document.querySelector(".countdown-container").innerHTML = "<h2>Redirecting...</h2>";
+        // Redirect to the courses folder (courses.html)
+        setTimeout(function() {
+          window.location.href = "/courses/courses.html";
+        }, 1200); // 1.2 seconds for user to see the message
       }
     }, 1000);
   </script>
