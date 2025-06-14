@@ -260,12 +260,6 @@
           box.classList.remove('animate');
         }, 500);
       });
-
-      // If the countdown is complete, clear the interval and show a message
-      if (distance < 0) {
-        clearInterval(countdownFunction);
-        document.querySelector(".countdown-container").innerHTML = "<h2>Time's up!</h2>";
-      }
     }, 1000);
   </script>
   
