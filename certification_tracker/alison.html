@@ -57,7 +57,6 @@
       z-index: 1;
       margin: 6vh auto;
       max-width: 1000px;
-      max-length: 950vw;
       background: var(--bg1);
       border-radius: 18px;
       box-shadow:
@@ -184,6 +183,7 @@
     .key-row.row3 { margin-left: 3.2em; }
     .key-row.row4 { margin-left: 4.2em; }
     .key-row.row5 { margin-left: 5.5em; }
+    .key-row-center { justify-content: center; }
     @media (max-width: 1100px) {
       .keyboard { min-width: 900px; max-width: 900px; }
     }
@@ -262,9 +262,9 @@
     <div class="title">Alison</div>
     <div class="subtitle">Basics in touch typing course</div>
     <div class="interact-note">
-      The keyboard below is interactable – click or tap any key to see it animate!<br>
+      The keyboard below is intractable – click or tap any key to see it animate!<br>
       The layout is responsive and works on both desktop and mobile screens.<br>
-      <span style="color:#b3b3ff">If you do not see the full keyboard, swipe left/right on mobile or scroll horizontally.</span>
+      <span class="keyboard-note">If you do not see the full keyboard, swipe left/right on mobile or scroll horizontally.</span>
     </div>
     <div class="keyboard-outer-scroll">
       <div class="keyboard">
@@ -349,8 +349,8 @@
           <div class="keycap">/</div>
           <div class="keycap w3 special">Shift</div>
         </div>
-        <!-- Row 6: Space row -->
-        <div class="key-row" style="justify-content:center;">
+        <div class="key-row key-row-center">
+        <div class="key-row key-row-center">
           <div class="keycap w1 special">Ctrl</div>
           <div class="keycap w1 special">Win</div>
           <div class="keycap w1 special">Alt</div>

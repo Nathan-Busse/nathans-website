@@ -15,6 +15,12 @@
       padding: 0;
       overflow-x: hidden;
     }
+    .ai-skillfest-highlight {
+      color: #6ec1e4;
+    }
+    .highlight-blue {
+      color: #6ec1e4;
+    }
     .hub-container {
       max-width: 900px;
       margin: 2.5rem auto 2rem auto;
@@ -118,6 +124,15 @@
       height: 100%;
       transition: width 0.7s cubic-bezier(.77,0,.18,1);
       box-shadow: 0 0 16px #6ec1e499;
+    }
+    .progress-60 {
+      width: 60%;
+    }
+    .progress-90 {
+      width: 90%;
+    }
+    .progress-40 {
+      width: 40%;
     }
     .challenge-list, .project-list {
       list-style: none;
@@ -251,7 +266,7 @@
     </div>
     <!-- AI Skill Fest Animated Button -->
     <div class="ai-skillfest-btn-container">
-      <button class="ai-skillfest-btn" onclick="window.location.href='AISkillsFest2025Acheivements.html'">
+      <button class="ai-skillfest-btn" onclick="window.location.href='AISkillsFest2025Achievements.html'">
         <span class="ai-glow"></span>
         <span class="ai-glow"></span>
         <span class="ai-glow"></span>
@@ -288,13 +303,13 @@
           
         </div>
       </div>
+          Completed <span class="ai-skillfest-highlight">all 10 AI Skill Fest challenge badges</span> and world record badges!<br>
       <br>
-      <br>
-      <p style="color:#005ba1; margin-top:1rem;">
+          <span class="highlight-blue">🎉 Won a Pearson voucher for 100% discount!</span>
         <strong>
-          Completed <span style="color:#6ec1e4;">all 10 AI Skill Fest challenge badges</span> and world record badges!<br>
+          Completed <span class="highlight-blue">all 10 AI Skill Fest challenge badges</span> and world record badges!<br>
           Hackathon badge pending delivery.<br>
-          <span style="color:#6ec1e4;">🎉 Won a Pearson voucher for 100% discount!</span>
+          <span class="highlight-blue">🎉 Won a Pearson voucher for 100% discount!</span>
         </strong>
       </p>
     </div>
@@ -303,15 +318,16 @@
       <ul class="challenge-list">
         <li>
           Azure Cloud Concepts
-          <div class="progress-bar"><div class="progress-bar-inner" style="width: 90%"></div></div>
+          <div class="progress-bar"><div class="progress-bar-inner progress-90"></div></div>
+          <div class="progress-bar"><div class="progress-bar-inner progress-60"></div></div>
         </li>
         <li>
           AI & Machine Learning
-          <div class="progress-bar"><div class="progress-bar-inner" style="width: 60%"></div></div>
-        </li>
+          <div class="progress-bar"><div class="progress-bar-inner progress-60"></div></div>
+          <div class="progress-bar"><div class="progress-bar-inner progress-40"></div></div>
         <li>
           Power Platform Automation
-          <div class="progress-bar"><div class="progress-bar-inner" style="width: 40%"></div></div>
+          <div class="progress-bar"><div class="progress-bar-inner progress-40"></div></div>
         </li>
       </ul>
     </div>
