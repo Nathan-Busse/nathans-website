@@ -255,19 +255,16 @@
         } else {
           // On public, check if countdown has lapsed
           async function main() {
-            const myModule = await import("./page_under_construction/503.js");
-          }
-
-main();
-
-          const countDownDate = new Date("June 14, 2025 23:59:59").getTime();
-          const now = new Date().getTime();
-          if (now < countDownDate) {
-            window.location.href = "/page_under_construction/503.html";
+            const countDownDate = await import("./page_under_construction/503.js");
+        
+            const now = new Date().getTime();
+            if (now < countDownDate.default) {
+              window.location.href = "/page_under_construction/503.html";
+            }
           }
         }
       })();
-    
+      main();
     </script>
 </body>
 </html>
