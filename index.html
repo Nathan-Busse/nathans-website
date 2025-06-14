@@ -665,6 +665,26 @@ Were the circuits like freeways?
   draw();
 })();
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Load intro content
+  fetch('html/intro_content.html')
+	.then(response => response.text())
+	.then(html => {
+	  document.getElementById('intro-content').innerHTML = html;
+
+	  // Add click event to the button
+	  document.querySelector('.iframe-btn').addEventListener('click', function() {
+		document.getElementById('social-iframe').style.display = 'block';
+		document.querySelector('.intro-content').style.display = 'none';
+		document.getElementById('iframe-back-btn').style.display = 'block';
+	  });
+
+	  // Show the back button
+	  document.getElementById('iframe-back-btn').style.display = 'none';
+	});
+
+  // Handle back button click			
 <div id="iframe-back-btn">
   <button onclick="(function(){
 	document.getElementById('social-iframe').style.display='none';
@@ -675,7 +695,6 @@ Were the circuits like freeways?
   </button>
 </div>
   });
-});
 </script>
 <div id="iframe-back-btn">
   <button onclick="(function(){
