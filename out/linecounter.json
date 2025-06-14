@@ -1,0 +1,1604 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/home/nathan/Desktop/workspace/full-stack-innovator/workflow/portfolio/nathan-busse.github.io",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2025-06-14 13:12:50",
+            "filesum": 235,
+            "codesum": 38967,
+            "commentsum": 1465,
+            "blanksum": 1165,
+            "statistics": {
+                ".html": {
+                    "code": 2505,
+                    "comment": 80,
+                    "blank": 178
+                },
+                ".js": {
+                    "code": 379,
+                    "comment": 136,
+                    "blank": 131
+                },
+                ".yml": {
+                    "code": 118,
+                    "comment": 5,
+                    "blank": 14
+                },
+                ".md": {
+                    "code": 209,
+                    "comment": 4,
+                    "blank": 32
+                },
+                "": {
+                    "code": 32,
+                    "comment": 1,
+                    "blank": 16
+                },
+                ".json": {
+                    "code": 17688,
+                    "comment": 0,
+                    "blank": 7
+                },
+                ".css": {
+                    "code": 15519,
+                    "comment": 1236,
+                    "blank": 783
+                },
+                ".ps1": {
+                    "code": 17,
+                    "comment": 0,
+                    "blank": 2
+                },
+                ".jsx": {
+                    "code": 11,
+                    "comment": 2,
+                    "blank": 2
+                },
+                ".svg": {
+                    "code": 2486,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".txt": {
+                    "code": 3,
+                    "comment": 1,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": ".gitattributes"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": ".github/dependabot.yml"
+                },
+                {
+                    "blank": 8,
+                    "code": 70,
+                    "comment": 5,
+                    "filename": ".github/workflows/codeql.yml"
+                },
+                {
+                    "blank": 6,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": ".github/workflows/jekyll-gh-pages.yml"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": ".hintrc"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "_config.yml"
+                },
+                {
+                    "filename": "Assets/images/favicon.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "Assets/images/intro-bg.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 287,
+                    "comment": 0,
+                    "filename": "Assets/images/motherboard.svg"
+                },
+                {
+                    "filename": "Assets/images/profile-pic.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "Assets/images/profile.jpeg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "Assets/images/trace.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "captcha/captcha.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "captcha/captcha.html"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 3,
+                    "filename": "captcha/captcha.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 211,
+                    "comment": 2,
+                    "filename": "certification_tracker/AISkillsFest2025Acheivements.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 330,
+                    "comment": 4,
+                    "filename": "certification_tracker/alison.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/autodesk_learning.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/aws_skills_builder.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/cppinstitute.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/libertyu.html"
+                },
+                {
+                    "blank": 8,
+                    "code": 342,
+                    "comment": 1,
+                    "filename": "certification_tracker/microsoft_learn.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/PageAssets/.gitkeep"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/PageAssets/achievements/.gitkeep"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/PageAssets/achievements/AWS/.gitkeep"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/.gitkeep"
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/0-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/1-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/10-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/2-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/3-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/4-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/5-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/6-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/7-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/8-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/9-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/0-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/1-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/10-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/2-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/3-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/4-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/5-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/6-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/7-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/8-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/9-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/backgrounds/ms-learn-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/PageAssets/icons/.gitkeep"
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/Alison-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/autodesk-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/aws-icon.jpeg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/cppinstitute-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/crop-removebg-preview.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/crop.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/LibertyU-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/ms-icon.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/unity-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "certification_tracker/PageAssets/icons/Untitled.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "certification_tracker/unity_learn.html"
+                },
+                {
+                    "blank": 7,
+                    "code": 73,
+                    "comment": 1,
+                    "filename": "courses/courses.css"
+                },
+                {
+                    "blank": 8,
+                    "code": 256,
+                    "comment": 3,
+                    "filename": "courses/courses.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "courses/courses.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "courses/courses.jsx"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "courses/PageAssets/.gitkeep"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "courses/PageAssets/achievements/.gitkeep"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "courses/PageAssets/achievements/AWS/.gitkeep"
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "courses/PageAssets/achievements/MS_learn/.gitkeep"
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/0-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/1-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/10-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/2-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/3-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/4-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/5-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/6-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/7-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/8-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/jpg/9-Achievements - nathan-busse _ Microsoft Learn_page-0001.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/0-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/1-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/10-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/2-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/3-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/4-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/5-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/6-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/7-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/8-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/achievements/MS_learn/AISkillsFest2025/pdf/9-Achievements - nathan-busse _ Microsoft Learn.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/backgrounds/ms-learn-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "courses/PageAssets/icons/.gitkeep"
+                },
+                {
+                    "filename": "courses/PageAssets/icons/Alison-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/autodesk-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/aws-icon.jpeg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/cppinstitute-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/crop-removebg-preview.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/crop.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/LibertyU-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/ms-icon.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/unity-icon.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "courses/PageAssets/icons/Untitled.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 151,
+                    "code": 616,
+                    "comment": 103,
+                    "filename": "css/base.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1663,
+                    "comment": 9,
+                    "filename": "css/font-awesome/css/font-awesome.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 4,
+                    "filename": "css/font-awesome/css/font-awesome.min.css"
+                },
+                {
+                    "filename": "css/font-awesome/fonts/fontawesome-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 520,
+                    "comment": 0,
+                    "filename": "css/font-awesome/fonts/fontawesome-webfont.svg"
+                },
+                {
+                    "filename": "css/font-awesome/fonts/fontawesome-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "css/font-awesome/fonts/fontawesome-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "css/font-awesome/fonts/FontAwesome.otf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 95,
+                    "comment": 7,
+                    "filename": "css/fonts.css"
+                },
+                {
+                    "blank": 107,
+                    "code": 2597,
+                    "comment": 307,
+                    "filename": "css/index.css"
+                },
+                {
+                    "filename": "css/micons/fonts/icomoon.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 241,
+                    "comment": 0,
+                    "filename": "css/micons/fonts/icomoon.svg"
+                },
+                {
+                    "filename": "css/micons/fonts/icomoon.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "css/micons/fonts/icomoon.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 714,
+                    "comment": 2,
+                    "filename": "css/micons/micons.css"
+                },
+                {
+                    "blank": 106,
+                    "code": 2365,
+                    "comment": 305,
+                    "filename": "css/studies.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "css/typewriter.css"
+                },
+                {
+                    "blank": 16,
+                    "code": 722,
+                    "comment": 23,
+                    "filename": "css/vendor.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "cv/.gitkeep"
+                },
+                {
+                    "filename": "docs/HTTP Status Codes Cheat Sheet - HTTP-Status-Codes-Cheat-Sheet.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-bold-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 74,
+                    "comment": 0,
+                    "filename": "fonts/lora/lora-bold-webfont.svg"
+                },
+                {
+                    "filename": "fonts/lora/lora-bold-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-bold-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-bolditalic-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 74,
+                    "comment": 0,
+                    "filename": "fonts/lora/lora-bolditalic-webfont.svg"
+                },
+                {
+                    "filename": "fonts/lora/lora-bolditalic-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-bolditalic-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-italic-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 74,
+                    "comment": 0,
+                    "filename": "fonts/lora/lora-italic-webfont.svg"
+                },
+                {
+                    "filename": "fonts/lora/lora-italic-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-italic-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-regular-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 74,
+                    "comment": 0,
+                    "filename": "fonts/lora/lora-regular-webfont.svg"
+                },
+                {
+                    "filename": "fonts/lora/lora-regular-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/lora/lora-regular-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 19,
+                    "code": 40,
+                    "comment": 1,
+                    "filename": "fonts/lora/stylesheet.css"
+                },
+                {
+                    "filename": "fonts/poppins/poppins-bold-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 76,
+                    "comment": 0,
+                    "filename": "fonts/poppins/poppins-bold-webfont.svg"
+                },
+                {
+                    "filename": "fonts/poppins/poppins-bold-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-bold-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-bold-webfont.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-light-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 76,
+                    "comment": 0,
+                    "filename": "fonts/poppins/poppins-light-webfont.svg"
+                },
+                {
+                    "filename": "fonts/poppins/poppins-light-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-light-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-light-webfont.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-medium-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 76,
+                    "comment": 0,
+                    "filename": "fonts/poppins/poppins-medium-webfont.svg"
+                },
+                {
+                    "filename": "fonts/poppins/poppins-medium-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-medium-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-medium-webfont.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-regular-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 76,
+                    "comment": 0,
+                    "filename": "fonts/poppins/poppins-regular-webfont.svg"
+                },
+                {
+                    "filename": "fonts/poppins/poppins-regular-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-regular-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-regular-webfont.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-semibold-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 76,
+                    "comment": 0,
+                    "filename": "fonts/poppins/poppins-semibold-webfont.svg"
+                },
+                {
+                    "filename": "fonts/poppins/poppins-semibold-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-semibold-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fonts/poppins/poppins-semibold-webfont.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 24,
+                    "code": 55,
+                    "comment": 1,
+                    "filename": "fonts/poppins/stylesheet.css"
+                },
+                {
+                    "blank": 151,
+                    "code": 616,
+                    "comment": 103,
+                    "filename": "fontstyles/base.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1663,
+                    "comment": 9,
+                    "filename": "fontstyles/font-awesome/css/font-awesome.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 4,
+                    "filename": "fontstyles/font-awesome/css/font-awesome.min.css"
+                },
+                {
+                    "filename": "fontstyles/font-awesome/fonts/fontawesome-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 520,
+                    "comment": 0,
+                    "filename": "fontstyles/font-awesome/fonts/fontawesome-webfont.svg"
+                },
+                {
+                    "filename": "fontstyles/font-awesome/fonts/fontawesome-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fontstyles/font-awesome/fonts/fontawesome-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fontstyles/font-awesome/fonts/FontAwesome.otf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 95,
+                    "comment": 7,
+                    "filename": "fontstyles/fonts.css"
+                },
+                {
+                    "blank": 106,
+                    "code": 2365,
+                    "comment": 305,
+                    "filename": "fontstyles/index.css"
+                },
+                {
+                    "filename": "fontstyles/micons/fonts/icomoon.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 241,
+                    "comment": 0,
+                    "filename": "fontstyles/micons/fonts/icomoon.svg"
+                },
+                {
+                    "filename": "fontstyles/micons/fonts/icomoon.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "fontstyles/micons/fonts/icomoon.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 714,
+                    "comment": 2,
+                    "filename": "fontstyles/micons/micons.css"
+                },
+                {
+                    "blank": 16,
+                    "code": 722,
+                    "comment": 23,
+                    "filename": "fontstyles/vendor.css"
+                },
+                {
+                    "blank": 95,
+                    "code": 370,
+                    "comment": 21,
+                    "filename": "index.html"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 4,
+                    "filename": "js/flip.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "js/jquery-2.1.3.min.js"
+                },
+                {
+                    "blank": 89,
+                    "code": 142,
+                    "comment": 64,
+                    "filename": "js/main.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "js/modernizr.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "js/pace.min.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 67,
+                    "comment": 45,
+                    "filename": "js/plugins.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 11,
+                    "comment": 1,
+                    "filename": "js/typewiriter.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "ManageGitCommit.ps1"
+                },
+                {
+                    "blank": 0,
+                    "code": 77,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 18,
+                    "code": 269,
+                    "comment": 5,
+                    "filename": "page_under_construction/503.html"
+                },
+                {
+                    "blank": 18,
+                    "code": 258,
+                    "comment": 5,
+                    "filename": "page_under_construction/courses_page_under_construction.html"
+                },
+                {
+                    "blank": 18,
+                    "code": 258,
+                    "comment": 5,
+                    "filename": "page_under_construction/cv_under_construction.html"
+                },
+                {
+                    "blank": 9,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "prototyping/index/typewriter/index.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "prototyping/index/typewriter/index.html"
+                },
+                {
+                    "blank": 4,
+                    "code": 21,
+                    "comment": 1,
+                    "filename": "prototyping/index/typewriter/index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "prototyping/lucide/lucide.html"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 2,
+                    "filename": "prototyping/lucide/lucide.jsx"
+                },
+                {
+                    "blank": 1,
+                    "code": 147,
+                    "comment": 0,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 10,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "rewire.md"
+                },
+                {
+                    "blank": 6,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "SECURITY.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src/.gitkeep"
+                },
+                {
+                    "blank": 27,
+                    "code": 153,
+                    "comment": 10,
+                    "filename": "studies/studies.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 21,
+                    "comment": 1,
+                    "filename": "studies/studies.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "studies/studies.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "studies/studies.jsx"
+                },
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "study-progress/.gitignore"
+                },
+                {
+                    "blank": 3,
+                    "code": 17522,
+                    "comment": 0,
+                    "filename": "study-progress/package-lock.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "study-progress/package.json"
+                },
+                {
+                    "filename": "study-progress/public/favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 20,
+                    "comment": 23,
+                    "filename": "study-progress/public/index.html"
+                },
+                {
+                    "filename": "study-progress/public/logo192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "study-progress/public/logo512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "study-progress/public/manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 1,
+                    "filename": "study-progress/public/robots.txt"
+                },
+                {
+                    "blank": 15,
+                    "code": 21,
+                    "comment": 4,
+                    "filename": "study-progress/README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "study-progress/src/App.css"
+                },
+                {
+                    "blank": 4,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "study-progress/src/App.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "study-progress/src/App.test.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "study-progress/src/components/ProgressBar.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 4,
+                    "filename": "study-progress/src/components/ProgressBar.html"
+                },
+                {
+                    "blank": 4,
+                    "code": 28,
+                    "comment": 2,
+                    "filename": "study-progress/src/components/ProgressBar.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "study-progress/src/index.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 3,
+                    "filename": "study-progress/src/index.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "study-progress/src/logo.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "study-progress/src/reportWebVitals.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 4,
+                    "filename": "study-progress/src/setupTests.js"
+                },
+                {
+                    "blank": 18,
+                    "code": 115,
+                    "comment": 10,
+                    "filename": "wakatime/wakatime.css"
+                },
+                {
+                    "blank": 9,
+                    "code": 113,
+                    "comment": 6,
+                    "filename": "wakatime/wakatime.html"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 4,
+                    "filename": "wakatime/wakatime.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "wakatime/wakatime.jsx"
+                }
+            ]
+        }
+    ]
+}
