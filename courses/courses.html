@@ -147,6 +147,36 @@
       letter-spacing: 1px;
     }
 
+    /* Countdown styles */
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 2rem 0;
+    }
+    .countdown-box {
+      display: flex;
+      gap: 1rem;
+    }
+    .countdown-box div {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+    .countdown-box span {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #4f8cff;
+      transition: transform 0.5s;
+    }
+    .countdown-box span.animate {
+      transform: scale(1.2);
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .certifications {
@@ -256,6 +286,49 @@
           window.location.href = "/page_under_construction/503.html";
         }
       })();
+    </script>
+    <!-- Add this script at the end of the body, after the countdown logic -->
+    <script>
+      // Set target date (adjust this as needed)
+      const countDownDate = new Date("June 14, 2025 23:59:59").getTime();
+
+      // Update countdown every second
+      const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        // Calculate time components
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the results with a leading zero if necessary
+        document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+        document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+
+        // Add a flip animation to the number update for a dynamic effect
+        const boxes = document.querySelectorAll('.countdown-box span');
+        boxes.forEach(box => {
+          box.classList.add('animate');
+          setTimeout(() => {
+            box.classList.remove('animate');
+          }, 500);
+        });
+
+        // If the countdown is complete, clear the interval and redirect to certification_tracker
+        if (distance < 0) {
+          clearInterval(countdownFunction);
+          // Optionally show a message before redirecting
+          document.querySelector(".countdown-container").innerHTML = "<h2>Redirecting...</h2>";
+          // Redirect to the certification_tracker folder (e.g. its index or main page)
+          setTimeout(function() {
+            window.location.href = "/certification_tracker/alison.html";
+          }, 1200); // 1.2 seconds for user to see the message
+        }
+      }, 1000);
     </script>
 </body>
 </html>
