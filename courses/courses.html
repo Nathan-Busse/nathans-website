@@ -209,60 +209,84 @@
         </div>
         <!-- Add more enrolled institutions here -->
     </div>
-    
+        
     <!-- Floating Back to Home Button -->
-    <button class="floating-home-button fa fa-home" onclick="goHome()" aria-label="Back to Home"></button>
-    <footer>
-        <p>&copy; 2025 Nathan Busse</p>
-    </footer>
+    <button class="floating-home-button fa fa-back" onclick="goHome()" aria-label="Back to Home"></button>
     <script>
       function goHome() {
-        window.location.href = "/index.html";
+        window.location.href = "microsoft_learn.html";
       }
-      // Tile click and keyboard navigation
+      // Animate tiles in with a staggered effect
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.tile').forEach((tile, i) => {
+          tile.style.animationDelay = (i * 0.13) + 's';
+        });
+      });
+      // Add event listeners to tiles for navigation
       document.querySelectorAll('.tile').forEach(tile => {
         tile.addEventListener('click', () => {
           const certName = tile.getAttribute('data-cert');
-          window.location.href = `/certification_tracker/${certName.toLowerCase().replace(/\s+/g, '_')}.html`;
-        });
-        tile.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            tile.click();
-          }
-        });
-      });
-      // Optional: Arrow key navigation for PS5 feel
-      const tiles = Array.from(document.querySelectorAll('.tile'));
-      let focusedIndex = 0;
-      document.body.addEventListener('keydown', (e) => {
-        if (['ArrowRight', 'ArrowLeft'].includes(e.key)) {
-          tiles[focusedIndex].blur();
-          if (e.key === 'ArrowRight') focusedIndex = (focusedIndex + 1) % tiles.length;
-          if (e.key === 'ArrowLeft') focusedIndex = (focusedIndex - 1 + tiles.length) % tiles.length;
-          tiles[focusedIndex].focus();
-        }
-      });
-    </script>
+          // Open the certification link in a new tab
+          window.open(certName, '_blank');
+          // Optionally, you can also navigate to a specific page
+          // window.location.href = certName;
 
-    <script>
-      /* Only allow local access to this page, otherwise redirect to 503.html
-          however nly allow public access to this page if countdown in 503.html has lapsed, otherwise redirect to 503.html
-          This is to prevent users from accessing this page before the countdown has ended */
-      (function() {
-        const host = window.location.host;
-        if (host === "http://127.0.1:5500" || host === "http://localhost:5500") {
-          // On local, redirect to courses page
-          window.location.href = "/courses/courses.html";
-        } else {
-          // On public, check if countdown has lapsed
-          const countDownDate = new Date("June 14, 2025 15:59:59").getTime();
-          const now = new Date().getTime();
-          if (now < countDownDate) {
-            window.location.href = "/page_under_construction/503.html";
-          }
-        }
-      })();
-    
+        });
+      });
     </script>
+      
+  <!-- Floating Back to Home Button -->
+  <button class="floating-home-button fa fa-home" onclick="goHome()" aria-label="Back to Home"></button>
+  <footer>
+      <p>&copy; 2025 Nathan Busse</p>
+  </footer>
+  <script>
+    function goHome() {
+      window.location.href = "/../certification_tracker/microsoft_learn.html";
+    }
+    // Tile click and keyboard navigation
+    document.querySelectorAll('.tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        const certName = tile.getAttribute('data-cert');
+        window.location.href = `/certification_tracker/${certName.toLowerCase().replace(/\s+/g, '_')}.html`;
+      });
+      tile.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          tile.click();
+        }
+      });
+    });
+    // Optional: Arrow key navigation for PS5 feel
+    const tiles = Array.from(document.querySelectorAll('.tile'));
+    let focusedIndex = 0;
+    document.body.addEventListener('keydown', (e) => {
+      if (['ArrowRight', 'ArrowLeft'].includes(e.key)) {
+        tiles[focusedIndex].blur();
+        if (e.key === 'ArrowRight') focusedIndex = (focusedIndex + 1) % tiles.length;
+        if (e.key === 'ArrowLeft') focusedIndex = (focusedIndex - 1 + tiles.length) % tiles.length;
+        tiles[focusedIndex].focus();
+      }
+    });
+  </script>
+  <script>
+    /* Only allow local access to this page, otherwise redirect to 503.html
+        however nly allow public access to this page if countdown in 503.html has lapsed, otherwise redirect to 503.html
+        This is to prevent users from accessing this page before the countdown has ended */
+    (function() {
+      const host = window.location.host;
+      if (host === "http://127.0.1:5500" || host === "http://localhost:5500") {
+        // On local, redirect to courses page
+        window.location.href = "/courses/courses.html";
+      } else {
+        // On public, check if countdown has lapsed
+        const countDownDate = new Date("June 14, 2025 15:59:59").getTime();
+        const now = new Date().getTime();
+        if (now < countDownDate) {
+          window.location.href = "/page_under_construction/503.html";
+        }
+      }
+    })();
+  
+  </script>
 </body>
 </html>
