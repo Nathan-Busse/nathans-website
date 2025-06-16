@@ -316,32 +316,71 @@
     }
     </style>
     <style>
-      /* Floating Back to Home Button */
+
+    /* Floating Home Button styling */
+    .floating-home-button {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: linear-gradient(120deg, #232a3d 60%, #4f8cff 100%);
+      color: #fff;
+      border: none;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 
+        background 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      z-index: 100;
+    }
+    .floating-home-button:hover, .floating-home-button:focus {
+      background: linear-gradient(120deg, #4f8cff 60%, #232a3d 100%);
+      transform: scale(1.12);
+      box-shadow: 0 8px 32px #4f8cff55;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: #7a7e8a;
+      font-size: 1rem;
+      margin: 2rem 0 1rem 0;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .certifications {
+        gap: 1.2rem;
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+      }
+      .tile {
+        flex: 0 0 180px;
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+      }
+      .tile img {
+        width: 56px;
+        height: 56px;
+      }
       .floating-home-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: linear-gradient(120deg, #4f8cff 60%, #232a3d 100%);
-        color: #fff;
-        border: none;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+        bottom: 16px;
+        right: 16px;
+      }
+      .navbar h1 {
         font-size: 1.5rem;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-        z-index: 100;
       }
-      .floating-home-button:hover, .floating-home-button:focus {
-        background: linear-gradient(120deg, #4f8cff 60%, #232a3d 100%);
-        transform: scale(1.12);
-        box-shadow: 0 8px 32px #4f8cff55;
-        outline: none;
-      }
+    }
     </style>
     <!-- Floating Back to Home Button -->
     <button class="floating-home-button fa fa-back" onclick="goHome()" aria-label="Back to Home"></button>
@@ -367,6 +406,60 @@
         });
       });
     </script>
+      
+  <!-- Floating Back to Home Button -->
+  <button class="floating-home-button fa fa-home" onclick="goHome()" aria-label="Back to Home"></button>
+  <footer>
+      <p>&copy; 2025 Nathan Busse</p>
+  </footer>
+  <script>
+    function goHome() {
+      window.location.href = "/../certification_tracker/microsoft_learn.html";
+    }
+    // Tile click and keyboard navigation
+    document.querySelectorAll('.tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        const certName = tile.getAttribute('data-cert');
+        window.location.href = `/certification_tracker/${certName.toLowerCase().replace(/\s+/g, '_')}.html`;
+      });
+      tile.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          tile.click();
+        }
+      });
+    });
+    // Optional: Arrow key navigation for PS5 feel
+    const tiles = Array.from(document.querySelectorAll('.tile'));
+    let focusedIndex = 0;
+    document.body.addEventListener('keydown', (e) => {
+      if (['ArrowRight', 'ArrowLeft'].includes(e.key)) {
+        tiles[focusedIndex].blur();
+        if (e.key === 'ArrowRight') focusedIndex = (focusedIndex + 1) % tiles.length;
+        if (e.key === 'ArrowLeft') focusedIndex = (focusedIndex - 1 + tiles.length) % tiles.length;
+        tiles[focusedIndex].focus();
+      }
+    });
+  </script>
+  <script>
+    /* Only allow local access to this page, otherwise redirect to 503.html
+        however nly allow public access to this page if countdown in 503.html has lapsed, otherwise redirect to 503.html
+        This is to prevent users from accessing this page before the countdown has ended */
+    (function() {
+      const host = window.location.host;
+      if (host === "http://127.0.1:5500" || host === "http://localhost:5500") {
+        // On local, redirect to courses page
+        window.location.href = "/courses/courses.html";
+      } else {
+        // On public, check if countdown has lapsed
+        const countDownDate = new Date("June 14, 2025 15:59:59").getTime();
+        const now = new Date().getTime();
+        if (now < countDownDate) {
+          window.location.href = "/page_under_construction/503.html";
+        }
+      }
+    })();
+  
+  </script>
     <footer>
         <p>&copy; 2025 Nathan Busse</p>
     </footer>
